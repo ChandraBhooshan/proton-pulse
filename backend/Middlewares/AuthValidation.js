@@ -8,6 +8,7 @@ const signupValidation = (req, res, next) => {
     });
     const { error } = schema.validate(req.body);
     if (error) {
+        console.error("Signup Validation Error:", error);
         return res.status(400)
             .json({ message: "Bad request", error })
     }
@@ -20,6 +21,7 @@ const loginValidation = (req, res, next) => {
     });
     const { error } = schema.validate(req.body);
     if (error) {
+        console.error("Login Validation Error:", error);
         return res.status(400)
             .json({ message: "Bad request", error })
     }
