@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { handleError, handleSuccess } from "./support-files/utils";
 import { ToastContainer } from "react-toastify";
+import './signup-login.css';
+
 
 function LoginHome() {
   const [loggedInUser, setLoggedInUser] = useState("");
