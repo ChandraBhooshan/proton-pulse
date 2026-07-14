@@ -25,7 +25,7 @@ function LoginHome() {
   const fetchProducts = async () => {
     try {
       // const url = "http://localhost:8080/products";
-      const url = `https://proton-pulse.vercel.app/login-signup/products`;
+      const url = `https://proton-pulse.vercel.app/signup-login/products`;
       const headers = {
         headers: {
           Authorization: localStorage.getItem("token"),
