@@ -1,0 +1,189 @@
+.home-section {
+    background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+    padding-top: 50px;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px 50px;
+}
+
+.home .left {
+    padding: 80px 0px 0px;
+    width: 40%;
+}
+
+.home .left h1 {
+    font-size: 52px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.home .left p {
+    font-size: 22px;
+    text-align: justify;
+    margin-bottom: 45px;
+}
+
+.homebuttondiv {
+    margin-top: 25px;
+}
+
+.homeButtons {
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+.home-button1 {
+    position: relative;
+    cursor: pointer;
+    border-radius: 800px;
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 1);
+    font-weight: 700;
+    padding: 14px 8px 14px 10px;
+    margin-right: 10px;
+}
+
+.home-button1:hover {
+    background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(249, 84, 84, 0.75));
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-button2 {
+    position: relative;
+    cursor: pointer;
+    border-radius: 45px;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 1);
+    font-weight: 700;
+    padding: 14px 58px 14px 10px;
+    color: black;
+}
+
+.home-button2 .arrowRight {
+    height: 22px;
+    position: absolute;
+    background-color: #9926f0;
+    color: white;
+    padding: 10px;
+    /* font-size: 18px; */
+    /* font-weight: 600; */
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.home-button2:hover {
+    background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(249, 84, 84, 0.75));
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-button2:hover .arrowRight {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    border: transparent;
+}
+
+.home .right {
+    /* float: right; */
+}
+
+.home .right img {
+    width: 500px;
+    margin-top: 80px;
+}
+
+#home-border {
+
+    width: 100%;
+}
+/* 
+@media (max-width : 1200px) {
+
+
+    .home-section {
+        padding-top: 120px;
+    }
+
+    .home {
+        padding: 50px 60px 50px;
+    }
+
+    .home .left {
+        padding: 0px 0px 0px;
+        width: 50%;
+    }
+
+    .home .right img {
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .home-section {
+        padding-top: 70px;
+    }
+
+    .home {
+        padding: 50px 30px 50px;
+    }
+
+    .home .left {
+        width: 45%;
+    }
+
+
+
+    .home-button1 {
+        margin-bottom: 50x;
+    }
+
+}
+
+
+@media (max-width: 426px) {
+
+
+    .home .left {
+        width: 100%;
+    }
+
+    .home .right {
+        display: none;
+    }
+
+    .home .left h1 {
+        margin-bottom: 0px;
+    }
+
+    .home .left p {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media (max-width: 376px) {}
+
+
+ */
+
+/* .main {
+    background-color: aquamarine;
+    height: 100vh;
+} */
+
+/* render ke andar return lgate hain */

@@ -1,0 +1,98 @@
+.footer {
+    padding: 0px 50px;
+    background-color: #151414;
+    color: white;
+}
+
+.footer .contact-conainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer .contact-conainer .contact-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.footer .contact-conainer .contact-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer .contact-conainer .contact-item p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer .summary {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 8px;
+    padding-bottom: 20px;
+}
+
+.footer hr {
+    width: 60px;
+    height: 2px;
+    color: white;
+    margin: 16px 0px 16px 0px;
+    background-color: white;
+    border: none;
+}
+
+.footer #col2 {
+    padding-left: 10px;
+}
+
+.footer #col2 ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.footer #col2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer #col3 {
+    padding-left: 10px;
+}
+
+.footer #col3 ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.footer #col3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer #col4 {
+    padding-left: 10px;
+}
+
+.footer #col4 ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.footer #col4 a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer #col4 .fab {
+    padding-right: 10px;
+}
+
+/* ****************COPYRIGHT**************** */
+
+#copyright {
+    text-align: center;
+    padding-bottom: 20px;
+}
