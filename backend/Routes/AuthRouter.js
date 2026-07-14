@@ -7,7 +7,7 @@ const {
 const router = require("express").Router();
 
 // router.post('/login', loginValidation, login);
-router.post("/login", (req, res) => {
+router.get("/login", (req, res) => {
   res.send("PONG_AUTH_LOGIN");
 });
 
