@@ -4,7 +4,7 @@ const UserModel = require("../Models/User");
 
 
 const signup = async (req, res) => {
-    console.log("Signup endpoint hit");
+    // console.log("Signup endpoint hit");
     try {
         const { name, email, password } = req.body;
         const user = await UserModel.findOne({ email });
