@@ -15,10 +15,10 @@ app.get("/ping", (req, res) => {
 
 app.use(bodyParser.json());
 app.use(cors());
-// app.use('/signup-login/auth', AuthRouter);
-app.use("/signup-login/auth", (req, res) => {
-  res.send("PONG_AUTH");
-});
+app.use('/signup-login/auth', AuthRouter);
+// app.use("/signup-login/auth", (req, res) => {
+//   res.send("PONG_AUTH");
+// });
 
 app.use("/signup-login/products", ProductRouter);
 
