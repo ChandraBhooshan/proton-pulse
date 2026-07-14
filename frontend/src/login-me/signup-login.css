@@ -1,27 +1,27 @@
-
+/* 
 *,
 ::before,
 ::after{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
+} */
 
 label{
   font-size: 20px;
 }
 
-html,
+/* html,
 body{
   height: 100%;
   width: 100%;
-}
+} */
 
-body{
+/* body{
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .container{
   background-color: #FFF;
