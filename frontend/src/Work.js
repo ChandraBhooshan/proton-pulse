@@ -32,6 +32,21 @@ function Work() {
       />
       {/* <OtpPage /> */}
       {/* <OtpInput /> */}
+      <button
+        style={{
+          background: "#97b8ff",
+          color: "white",
+          border: "none",
+          padding: "10px 20px",
+          borderRadius: "8px",
+          fontSize: "16px",
+          // fontWeight: "600",
+          cursor: "pointer",
+        }}
+        onClick={() => navigate("/signup-login")}
+      >
+        Signup/Login
+      </button>
     </div>
   );
 }

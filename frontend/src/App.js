@@ -9,6 +9,9 @@ import Dashboard from "./Dashboard.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StrictMode } from "react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import Signup from "./login-me/Signup.js";
+import Login from "./login-me/Login.js";
+import Login_Home from "./login-me/Home.js";
 
 function App() {
   const CLIENT_ID =
@@ -38,6 +41,9 @@ function App() {
           ></Route>
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/signup-login" element={<Signup />} />
+          <Route path="/signup-login/login" element={<Login />} />
+          <Route path="/signup-login/home" element={<Login_Home />} />
         </Routes>
       </BrowserRouter>
     </div>
