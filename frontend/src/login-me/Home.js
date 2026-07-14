@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { handleError, handleSuccess } from "./support-files/utils";
 import { ToastContainer } from "react-toastify";
 
-function Login_Home() {
+function LoginHome() {
   const [loggedInUser, setLoggedInUser] = useState("");
   const [products, setProducts] = useState("");
   const navigate = useNavigate();
@@ -60,4 +60,4 @@ function Login_Home() {
   );
 }
 
-export default Login_Home;
+export default LoginHome;
