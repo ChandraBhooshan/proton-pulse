@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <div>
       <div class="nav">
-        <div class="left">React</div>
+        <div class="left">Proton</div>
         <button
           class="navbaTogglerButton"
           type="button"
