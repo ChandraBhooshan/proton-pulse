@@ -1,0 +1,98 @@
+/* ========================================
+   DIGITAL CLOCK MODULE
+======================================== */
+
+.clock-widget {
+  width: 100%;
+  padding: 24px 16px;
+  text-align: center;
+
+  background: linear-gradient(135deg, #ffffff, #f7f1ff);
+
+  border: 1px solid rgba(153, 38, 240, 0.15);
+  border-radius: 12px;
+}
+
+/* Header */
+
+.clock-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  color: #777;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.clock-indicator {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+/* Time display */
+
+.clock-time {
+  margin: 20px 0 10px;
+
+  font-size: clamp(30px, 5vw, 48px);
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+
+  color: #9926f0;
+  white-space: nowrap;
+}
+
+/* Date display */
+
+.clock-date {
+  color: #777;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+/* Format button */
+
+.clock-format-button {
+  padding: 9px 16px;
+
+  background: transparent;
+  color: #9926f0;
+
+  border: 1px solid #9926f0;
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.clock-format-button:hover {
+  background: #9926f0;
+  color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .clock-widget {
+    padding: 20px 10px;
+  }
+
+  .clock-time {
+    letter-spacing: 1px;
+  }
+
+  .clock-date {
+    font-size: 12px;
+  }
+}

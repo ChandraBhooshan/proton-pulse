@@ -25,17 +25,18 @@ function About() {
               a positive attitude I am ready to make a meaningful contribution
               and achieve great things.
             </p>
+            
             <a
               href="./CV.pdf"
-              class="home-button1"
+              class="about-button1"
               download="CV [Chandra Bhooshan]"
             >
-              <button type="" class="homeButtons">
+              <button type="" class="aboutButtons">
                 Download CV
               </button>
             </a>
-            <a href="mailto:TEST----------@gmail.com" class="home-button2">
-              <button type="" class="homeButtons">
+            <a href="mailto:TEST----------@gmail.com" class="about-button2">
+              <button type="" class="aboutButtons">
                 Get in Touch
                 <span>
                   <FontAwesomeIcon icon={faArrowRight} class="arrowRight" />

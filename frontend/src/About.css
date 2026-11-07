@@ -1,6 +1,6 @@
 .home-section {
     background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
-    padding-top: 50px;
+    /* padding-top: 50px; */
 }
 
 .home {
@@ -30,46 +30,48 @@
     margin-top: 25px;
 }
 
-.homeButtons {
+.aboutButtons {
     border: none;
     background-color: transparent;
+    border-radius: 800px;
     font-weight: 500;
     font-size: 20px;
 
 }
 
-.home-button1 {
+.about-button1 {
     position: relative;
     cursor: pointer;
     border-radius: 800px;
     color: black;
     text-decoration: none;
-    background-color: white;
+    /* background-color: white; */
     border: 1px solid rgba(255, 255, 255, 1);
     font-weight: 700;
     padding: 14px 8px 14px 10px;
     margin-right: 10px;
 }
 
-.home-button1:hover {
-    background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(249, 84, 84, 0.75));
-    color: #fff;
+.about-button1:hover {
+    /* background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(249, 84, 84, 0.75)); */
+    /* color: #fff; */
     text-decoration: none;
 }
 
-.home-button2 {
+.about-button2 {
     position: relative;
     cursor: pointer;
     border-radius: 45px;
-    background-color: white;
+    /* background-color: white; */
     border: 1px solid rgba(255, 255, 255, 1);
     font-weight: 700;
     padding: 14px 58px 14px 10px;
     color: black;
 }
 
-.home-button2 .arrowRight {
-    height: 22px;
+.about-button2 .arrowRight {
+    height: 40px;
+    
     position: absolute;
     background-color: #9926f0;
     color: white;
@@ -82,13 +84,13 @@
     border-radius: 50%;
 }
 
-.home-button2:hover {
-    background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(249, 84, 84, 0.75));
-    color: #fff;
+.about-button2:hover {
+    /* background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(249, 84, 84, 0.75));
+    color: #fff; */
     text-decoration: none;
 }
 
-.home-button2:hover .arrowRight {
+.about-button2:hover .arrowRight {
     background-color: rgba(0, 0, 0, 0.6);
     text-decoration: none;
     border: transparent;

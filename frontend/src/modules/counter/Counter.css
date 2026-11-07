@@ -1,0 +1,75 @@
+/* Counter Module */
+
+.counter-widget {
+  width: 100%;
+  padding: 24px 16px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid rgba(153, 38, 240, 0.15);
+  border-radius: 12px;
+}
+
+.counter-widget h3 {
+  color: #333;
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+/* Counter display */
+
+.counter-display {
+  font-size: 52px;
+  font-weight: 700;
+  color: #9926f0;
+  margin: 15px 0 25px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Controls */
+
+.counter-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.counter-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.counter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.increment {
+  background: #9926f0;
+  color: white;
+}
+
+.decrement {
+  background: #f95454;
+  color: white;
+}
+
+.reset {
+  background: #eeeeee;
+  color: #333;
+}
+
+@media (max-width: 400px) {
+  .counter-controls {
+    gap: 8px;
+  }
+
+  .counter-btn {
+    padding: 9px 15px;
+  }
+}

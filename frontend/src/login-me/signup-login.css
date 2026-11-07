@@ -1,27 +1,9 @@
 /* 
-*,
-::before,
-::after{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-} */
-
 label{
   font-size: 20px;
 }
 
-/* html,
-body{
-  height: 100%;
-  width: 100%;
-} */
 
-/* body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .container{
   background-color: #FFF;
@@ -69,4 +51,159 @@ button{
   padding: 10px;
   cursor: pointer;
   margin: 10px 0;
+} */
+
+/* ========================================
+   AUTHENTICATION FORM
+======================================== */
+
+/* Main form card */
+
+.container {
+  width: 100%;
+  max-width: 440px;
+
+  margin: 45px auto;
+  padding: 32px 36px;
+
+  background: #ffffff;
+  border-radius: 14px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  box-sizing: border-box;
+}
+
+/* Heading */
+
+.container > h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+
+  margin: 0 0 28px;
+}
+
+/* Form layout */
+
+.container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.container form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Labels */
+
+.container label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Input fields */
+
+.container input {
+  width: 100%;
+  padding: 12px 10px;
+
+  font-size: 16px;
+  color: #222;
+
+  background: transparent;
+
+  border: none;
+  border-bottom: 1px solid #aaa;
+  border-radius: 0;
+
+  outline: none;
+  box-sizing: border-box;
+
+  transition: border-color 0.25s ease;
+}
+
+.container input:focus {
+  border-bottom: 2px solid #9926f0;
+}
+
+.container input::placeholder {
+  font-size: 13px;
+  font-style: italic;
+  color: #999;
+}
+
+/* Submit button */
+button {
+  background: linear-gradient(to right, #9926f0, #d122e3);
+  border: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  /* margin: 10px 0; */
+}
+
+.container button {
+  width: 100%;
+  padding: 13px;
+  margin: 12px 0 4px;
+  background: linear-gradient(to right, #9926f0, #d122e3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(153, 38, 240, 0.25);
+}
+
+/* Footer text */
+
+.container p {
+  text-align: center;
+  font-size: 15px;
+  color: #444;
+  margin-top: 22px;
+}
+
+.container a {
+  color: #880088;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.container a:hover {
+  color: #9926f0;
+}
+
+/* Responsive */
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    margin: 25px auto;
+    padding: 28px 22px;
+  }
+
+  .container > h1 {
+    font-size: 26px;
+  }
+
+  .container label {
+    font-size: 15px;
+  }
 }

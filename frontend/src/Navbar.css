@@ -1,160 +1,204 @@
 /* ****************NAVBAR**************** */
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 100px;
-    background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(249, 84, 84, 0.75));
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 100px;
+  background: linear-gradient(
+    to right,
+    rgba(153, 38, 240, 0.95),
+    rgba(249, 84, 84, 0.75)
+  );
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  /* position: fixed; */
+  position: relative;
+
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
 .navbaTogglerButton {
-    padding: 4px 12px;
-    font-size: 20px;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    /* display: none; */
-    transition: box-shadow 0.15s ease-in-out;
+  padding: 4px 12px;
+  font-size: 20px;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  /* display: none; */
+  transition: box-shadow 0.15s ease-in-out;
 }
 
 .navbarTogglerIcon {
-    color: white;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
+  color: white;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 .navbaTogglerButton:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .navbaTogglerButton:focus {
-    text-decoration: none;
-    outline: 0;
-    box-shadow: 0 0 0 4px;
-    color: rgba(255, 255, 255, 0.55);
-    border-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 4px;
+  color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav .left {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 32px;
-    font-weight: 600;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .nav .navRight {
-    display: flex;
-    /* display: inline-block; */
-    align-items: center;
-    /* flex-basis: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  /* height: 60px; */
+  /* height: fit-content; */
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  flex: 0 0 auto;
+  box-sizing: border-box;
 }
+
+/* .nav .navRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: auto;
+  height: auto;
+  min-height: 0;
+
+  padding: 0;
+  margin: 0;
+
+  flex: 0 0 auto;
+  align-self: center;
+  box-sizing: border-box;
+  line-height: normal;
+} */
 
 /* .navbarCollapse {}== navRight */
 /* .navRight:not(.show) {
     display: none;
 } */
 
-
 .nav a {
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 
 .nav a:hover {
-    color: white;
+  color: white;
 }
 
 .nav-button {
-    position: relative;
-    cursor: pointer;
-    border-radius: 800px;
-    background-color: white;
-    border: 1px solid rgba(255, 255, 255, 1);
-    font-weight: 600;
-    padding: 14px 70px 14px 20px;
-    font-size: 18px;
-    margin-left: 10px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 800px;
+  background-color: white;
+  border: 1px solid rgba(255, 255, 255, 1);
+  font-weight: 600;
+  padding: 14px 70px 14px 20px;
+  font-size: 18px;
+  margin-left: 10px;
 }
 
 .nav-button .callPhone {
-    height: 20px;
-    position: absolute;
-    background-color: #9926f0;
-    color: white;
-    padding: 10px;
-    top: 50%;
-    right: 5px;
-    transform: translateY(-50%);
-    border-radius: 50%;
+  height: 20px;
+  position: absolute;
+  background-color: #9926f0;
+  color: white;
+  padding: 10px;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  border-radius: 50%;
 }
 
 .nav-button:hover {
-    background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(249, 84, 84, 0.75));
-    color: #fff;
+  background: linear-gradient(
+    to right,
+    rgba(153, 38, 240, 0.95),
+    rgba(249, 84, 84, 0.75)
+  );
+  color: #fff;
 }
 
 .nav-button:hover .callPhone {
-    background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 1201px) {
-    .navbaTogglerButton {
-        display: none;
-    }
+  .navbaTogglerButton {
+    display: none;
+  }
 }
 
-@media (max-width : 1200px) {
-    .nav {
-        padding: 10px 20px;
-    }
+@media (max-width: 1200px) {
+  .nav {
+    padding: 10px 20px;
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
 
-    .nav .navRight {
-        display: inline-block;
-        align-items: center;
-        flex-basis: 100%;
-        flex-grow: 1;
-    }
+  .nav .navRight {
+    display: inline-block;
+    align-items: center;
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
 
-    /* .collapsing {
+  /* .collapsing {
         height: 0;
         overflow: hidden;
         transition: height 0.35s ease;
     } */
 
-    .navRight:not(.show) {
-        display: none;
-    }
-
+  .navRight:not(.show) {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
+  .nav {
+    padding: 0px 20px;
+  }
 
-    .nav {
-        padding: 0px 20px;
-    }
-
-    .nav .navRight {}
-
-
+  .nav .navRight {
+  }
 }
 
+@media (max-width: 426px) {
+}
 
-@media (max-width: 426px) {}
-
-@media (max-width: 376px) {}
+@media (max-width: 376px) {
+}

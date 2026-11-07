@@ -7,17 +7,17 @@ import { Link } from "react-router";
 function Navbar() {
   return (
     <div>
-      <div class="nav">
-        <div class="left">Proton</div>
+      <div className="nav">
+        <div className="left">Proton</div>
         <button
-          class="navbaTogglerButton"
+          className="navbaTogglerButton"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
         >
-          <FontAwesomeIcon icon={faBars} class="navbarTogglerIcon" />
+          <FontAwesomeIcon icon={faBars} className="navbarTogglerIcon" />
         </button>
-        <div class="navRight collapses navbarCollapse" id="navbarNav">
+        <div className="navRight collapses navbarCollapse" id="navbarNav">
           <Link to="/home" className="nav-link" aria-current="page">
             Home
           </Link>
@@ -30,10 +30,10 @@ function Navbar() {
           <Link to="/blog" className="nav-link">
             Blog
           </Link>
-          <button type="" class="nav-button">
-            +91 955----507
+          <button type="" className="nav-button">
+            +91 955--507
             <span>
-              <FontAwesomeIcon icon={faPhone} class="callPhone" />
+              <FontAwesomeIcon icon={faPhone} className="callPhone" />
             </span>
           </button>
         </div>

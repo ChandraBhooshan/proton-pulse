@@ -1,5 +1,5 @@
-body {
-  margin: 0;
+/* body {
+  margin: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +10,128 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/* ========================================
+   GLOBAL RESET
+======================================== */
+
+/* :root { */
+/* Brand colors */
+/* --brand-primary: #9926f0;
+  --brand-secondary: #f95454;
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--brand-primary),
+    #d122e3
+  ); */
+
+/* Theme colors */
+/* --bg-dark: #09090e;
+  --bg-card: #15151e;
+  --text-main: #f8f8f2;
+  --text-muted: #a1a1b5; */
+
+/* Layout */
+/* --navbar-height: 90px;
+  --content-width: 1200px; */
+
+/* Shared effects */
+/* --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.12);
+} */
+
+:root {
+  /* Brand colors */
+  --brand-primary: #9926f0;
+  --brand-secondary: #f95454;
+
+  --gradient-primary: linear-gradient(135deg, var(--brand-primary), #d122e3);
+
+  /* Default light theme */
+  --bg-dark: #ffffff;
+  --bg-card: #f8f7fb;
+  --text-main: #171717;
+  --text-muted: #88889b;
+
+  /* Layout */
+  --navbar-height: 90px;
+  --content-width: 1200px;
+
+  /* Effects */
+  --border-color: rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Universal box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Document */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* React root */
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Media */
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* Form elements */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Code */
+
+code,
+pre {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Accessibility */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

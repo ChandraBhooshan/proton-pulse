@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
-import './signup-login.css';
-
+import "./signup-login.css";
 
 function Login() {
   const [loginInfo, setLoginInfo] = useState({
