@@ -7,7 +7,7 @@
   /* min-height: 100vh; */
   min-height: calc(100vh - var(--navbar-height));
   /* padding: 0px 5%; */
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 0px;
   padding-left: 5%;
   padding-right: 5%;
@@ -35,33 +35,11 @@
 
 /* Feature grid - future modules */
 
-/* .work-feature-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  width: 100%;
-  align-items: stretch;
-} */
-
 .work-feature-grid {
   column-count: 3;
   column-gap: 24px;
   width: 100%;
 }
-
-/* Feature card */
-
-/* .work-feature-card {
-  min-width: 0;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 24px;
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease;
-} */
 
 /* Individual Feature Cards */
 
@@ -106,10 +84,6 @@
 /* Tablet */
 
 @media (max-width: 900px) {
-  /* .work-feature-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-  } */
   .work-feature-grid {
     column-count: 2;
   }
@@ -118,20 +92,11 @@
   .work-page {
     padding: 30px 18px;
   }
-
-  /* .work-feature-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-  } */
 }
 
 /* Mobile */
 
 @media (max-width: 576px) {
-  /* .work-feature-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  } */
   .work-feature-grid {
     column-count: 1;
   }
@@ -141,8 +106,4 @@
   .work-page {
     padding: 24px 14px;
   }
-
-  /* .work-feature-grid {
-    grid-template-columns: 1fr;
-  } */
 }

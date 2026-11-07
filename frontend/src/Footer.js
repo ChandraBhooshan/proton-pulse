@@ -3,7 +3,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="contact-conainer">
+      {/* <div className="contact-conainer">
         <div className="contact-item">
           <img src="./images/phone-call2.png" alt="Phone" />
           <div>
@@ -26,7 +26,7 @@ function Footer() {
             <p>Uttar Pradesh, IN (213141)</p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="summary">
         <div id="col1">
@@ -69,6 +69,16 @@ function Footer() {
             <li>
               <a href="#">Home</a>
             </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+
           </ul>
         </div>
 
@@ -104,7 +114,9 @@ function Footer() {
         </div>
       </div>
 
-      <div id="copyright">&copy; Copyright 2024 Chandra Bhooshan</div>
+      <div id="copyright">
+        &copy; {new Date().getFullYear()} ProtonPulse Inc. All rights reserved.
+      </div>
     </footer>
   );
 }

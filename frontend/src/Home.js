@@ -1,5 +1,6 @@
 import React from "react";
 import "./home.css";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -176,33 +177,7 @@ const Home = () => {
       </section>
 
       {/* 10. Footer */}
-      <footer className="footer-section">
-        <div className="footer-grid">
-          <div className="footer-brand">
-            <h3>ProtonPulse</h3>
-            <p>Powering the future.</p>
-          </div>
-          <div className="footer-links">
-            <h4>Company</h4>
-            <a href="#about">About</a>
-            <a href="#careers">Careers</a>
-            <a href="#contact">Contact</a>
-          </div>
-          <div className="footer-newsletter">
-            <h4>Stay Updated</h4>
-            <div className="input-group">
-              <input type="email" placeholder="Enter your email" />
-              <button className="btn btn-primary">Subscribe</button>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>
-            &copy; {new Date().getFullYear()} ProtonPulse Inc. All rights
-            reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
