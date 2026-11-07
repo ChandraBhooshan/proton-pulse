@@ -6,6 +6,7 @@ import Counter from "./modules/counter/Counter";
 import Todo from "./modules/todo/Todo";
 // import ImageConverter from "./modules/image-converter/ImageConJpgToPng";
 import "./Work.css";
+import Newsletter from "./modules/newsletter/Newsletter";
 
 function Work() {
   const navigate = useNavigate();
@@ -86,6 +87,12 @@ function Work() {
 
             <ImageConverter />
           </section> */}
+          <section className="work-feature-card">
+            {/* <h2>Newsletter Subscription</h2>
+            <p>Subscribe to receive the latest updates.</p> */}
+
+            <Newsletter />
+          </section>
         </div>
       </div>
     </div>

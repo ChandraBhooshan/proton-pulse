@@ -1,0 +1,114 @@
+.newsletter-container {
+  width: 100%;
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 35px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #eee5f5;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.newsletter-content {
+  text-align: center;
+}
+
+.newsletter-tag {
+  display: inline-block;
+  color: #9926f0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.newsletter-content h2 {
+  color: #24202b;
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+
+.newsletter-content p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: 8px;
+  padding: 5px;
+
+  background: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.newsletter-input-group input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.newsletter-input-group button {
+  padding: 12px 18px;
+  margin: 0;
+
+  background: linear-gradient(to right, #9926f0, #d122e3);
+
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.newsletter-input-group button:hover {
+  opacity: 0.85;
+}
+
+.newsletter-input-group button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.newsletter-content .newsletter-status {
+  margin: 15px 0;
+  color: #16834a;
+  font-size: 13px;
+}
+
+.newsletter-content small {
+  display: block;
+  margin-top: 18px;
+  color: #999;
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  .newsletter-container {
+    padding: 22px 16px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 23px;
+  }
+
+  .newsletter-input-group {
+    flex-direction: column;
+  }
+
+  .newsletter-input-group button {
+    width: 100%;
+  }
+}
