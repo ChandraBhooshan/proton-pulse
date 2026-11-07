@@ -10,7 +10,7 @@ import { StrictMode } from "react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Signup from "./login-me/Signup.js";
 import Login from "./login-me/Login.js";
-import LoginHome from "./login-me/Home.js";
+import LoginHome from "./login-me/UserHome.js";
 
 function App() {
   const CLIENT_ID =
