@@ -1,6 +1,6 @@
 
 import "./home.css";
-import Footer from "./Footer";
+import Footer from "./Footer.js";
 
 const Home = () => {
   return (
