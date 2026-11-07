@@ -1,33 +1,4 @@
-/* --- CSS Variables & Base Setup --- */
-/* :root { */
-/* --bg-dark: #09090e; */
-/* --bg-card: #15151e; */
-/* --text-main: #f8f8f2; */
-/* --text-muted: #a1a1b5; */
-/* --neon-blue: rgba(153, 38, 240, 0.95); */
-/* --neon-purple: rgba(209, 34, 227, 0.95); */
-/* --text-main: #f8f8f2; */
-/* --neon-blue: #00f0ff; */
-/* --neon-purple: #8a2be2; */
-/* --gradient-primary: linear-gradient(135deg, var(--neon-blue), var(--neon-purple)); */
-/* } */
 
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-
-/* body {
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  font-family: 'Inter', -apple-system, sans-serif;
-  line-height: 1.6;
-} */
-
-/* .proton-home {
-  overflow-x: hidden;
-} */
 
 .proton-home {
   background-color: var(--bg-dark);

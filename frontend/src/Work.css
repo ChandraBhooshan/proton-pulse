@@ -1,10 +1,3 @@
-/* 
-
-.work-page{
-    margin-top: 100px;
-    margin-left: 50px;
-} */
-
 /* ========================================
    WORK PAGE
 ======================================== */
@@ -13,7 +6,12 @@
   width: 100%;
   /* min-height: 100vh; */
   min-height: calc(100vh - var(--navbar-height));
-  padding: 0px 5%;
+  /* padding: 0px 5%; */
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 5%;
+  padding-right: 5%;
+
   margin: 0 auto;
 
   background-color: var(--bg-dark);
@@ -39,23 +37,25 @@
 
 /* .work-feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  width: 100%;
-} */
-.work-feature-grid {
-  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
   width: 100%;
   align-items: stretch;
+} */
+
+.work-feature-grid {
+  column-count: 3;
+  column-gap: 24px;
+  width: 100%;
 }
+
 /* Feature card */
 
 /* .work-feature-card {
+  min-width: 0;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 14px;
+  border-radius: 16px;
   padding: 24px;
 
   transition:
@@ -63,12 +63,22 @@
     border-color 0.25s ease;
 } */
 
+/* Individual Feature Cards */
+
 .work-feature-card {
-  min-width: 0;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 0 0 24px;
+  padding: 24px;
+
+  break-inside: avoid;
+  page-break-inside: avoid;
+
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 16px;
-  padding: 24px;
 
   transition:
     transform 0.25s ease,
@@ -96,9 +106,12 @@
 /* Tablet */
 
 @media (max-width: 900px) {
-  .work-feature-grid {
+  /* .work-feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+  } */
+  .work-feature-grid {
+    column-count: 2;
   }
 }
 @media (max-width: 768px) {
@@ -106,18 +119,21 @@
     padding: 30px 18px;
   }
 
-  .work-feature-grid {
+  /* .work-feature-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 18px;
-  }
+  } */
 }
 
 /* Mobile */
 
 @media (max-width: 576px) {
-  .work-feature-grid {
+  /* .work-feature-grid {
     grid-template-columns: 1fr;
     gap: 18px;
+  } */
+  .work-feature-grid {
+    column-count: 1;
   }
 }
 
@@ -126,7 +142,7 @@
     padding: 24px 14px;
   }
 
-  .work-feature-grid {
+  /* .work-feature-grid {
     grid-template-columns: 1fr;
-  }
+  } */
 }

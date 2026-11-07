@@ -81,29 +81,6 @@
   box-sizing: border-box;
 }
 
-/* .nav .navRight {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  width: auto;
-  height: auto;
-  min-height: 0;
-
-  padding: 0;
-  margin: 0;
-
-  flex: 0 0 auto;
-  align-self: center;
-  box-sizing: border-box;
-  line-height: normal;
-} */
-
-/* .navbarCollapse {}== navRight */
-/* .navRight:not(.show) {
-    display: none;
-} */
-
 .nav a {
   color: black;
   font-size: 20px;
