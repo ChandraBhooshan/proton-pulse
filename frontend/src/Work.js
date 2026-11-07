@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Clock from "./modules/clock/Clock";
 import Counter from "./modules/counter/Counter";
 import Todo from "./modules/todo/Todo";
-// import ImageConverter from "./modules/image-converter/ImageConJpgToPng";
 import "./Work.css";
 import Newsletter from "./modules/newsletter/Newsletter";
 
@@ -81,16 +80,8 @@ function Work() {
 
             <Todo />
           </section>
-          {/* <section className="work-feature-card">
-            <h2>Image Converter</h2>
-            <p>Convert JPG images into PNG format.</p>
 
-            <ImageConverter />
-          </section> */}
           <section className="work-feature-card">
-            {/* <h2>Newsletter Subscription</h2>
-            <p>Subscribe to receive the latest updates.</p> */}
-
             <Newsletter />
           </section>
         </div>
