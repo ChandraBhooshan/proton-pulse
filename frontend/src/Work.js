@@ -5,7 +5,7 @@ import Clock from "./modules/clock/Clock";
 import Counter from "./modules/counter/Counter";
 import Todo from "./modules/todo/Todo";
 import "./Work.css";
-// import Newsletter from "./modules/newsletter/Newsletter";
+import Newsletter from "./modules/newsletter/Newsletter";
 
 function Work() {
   const navigate = useNavigate();
@@ -81,9 +81,9 @@ function Work() {
             <Todo />
           </section>
 
-          {/* <section className="work-feature-card">
+          <section className="work-feature-card">
             <Newsletter />
-          </section> */}
+          </section>
         </div>
       </div>
     </div>
