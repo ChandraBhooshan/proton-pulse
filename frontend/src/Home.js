@@ -1,5 +1,5 @@
 import "./home.css";
-import Footer from "./Footer.js";
+// import Footer from "./Footer.js";
 
 const Home = () => {
   return (
@@ -180,7 +180,7 @@ const Home = () => {
       </section>
 
       {/* 10. Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
