@@ -21,11 +21,11 @@ app.use("/signup-login/auth", AuthRouter);
 app.use("/signup-login/products", ProductRouter);
 
 // Local development server
-// if (require.main === module) {
-//   app.listen(PORT, () => {
-//     console.log(`Server running on port ${PORT}`);
-//   });
-// }
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 // Above last use
 // app.listen(PORT, () => {
 //   console.log(`Server is running on ${PORT}`);
