@@ -1,4 +1,3 @@
-
 import "./home.css";
 import Footer from "./Footer.js";
 
@@ -22,8 +21,12 @@ const Home = () => {
           </div>
         </div>
         <div className="hero-illustration">
-          <div className="abstract-shape shape-1"></div>
-          <div className="abstract-shape shape-2"></div>
+          {/* <div className="abstract-shape shape-1"> */}
+          {/* <img src="./images/home1.png" alt="Abstract Shape 1" /> */}
+          {/* </div> */}
+          {/* <div className="abstract-shape shape-2"> */}
+          {/* <img src="./images/home1.png" alt="Abstract Shape 2" /> */}
+          {/* </div> */}
         </div>
       </section>
 

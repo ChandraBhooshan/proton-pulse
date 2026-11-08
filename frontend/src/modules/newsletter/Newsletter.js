@@ -18,15 +18,10 @@ function Newsletter() {
     setStatus("");
 
     try {
-      const API_URL = process.env.REACT_APP_API_URL;
+      // const API_URL = process.env.REACT_APP_API_URL;
+      const API_URL = "http://localhost:8080";
+
       // Connect this endpoint to your backend.
-      // const response = await fetch("/api/newsletter/subscribe", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({ email: email.trim() }),
-      // });
       const response = await fetch(`${API_URL}/api/newsletter/subscribe`, {
         method: "POST",
         headers: {
