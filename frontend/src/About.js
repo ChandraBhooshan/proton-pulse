@@ -63,14 +63,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function About() {
-  const skills = [
-    "Web Development",
-    "Frontend Development",
-    "Backend Development",
-    "Python Programming",
-    "Database Management",
-    "Problem Solving",
-  ];
+  // const skills = [
+  //   "Web Development",
+  //   "Frontend Development",
+  //   "Backend Development",
+  //   "Python Programming",
+  //   "Database Management",
+  //   "Problem Solving",
+  // ];
 
   return (
     <main className="about-page">
