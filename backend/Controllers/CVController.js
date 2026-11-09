@@ -39,7 +39,7 @@ const requestCV = async (req, res) => {
     }
 
     // Before saving
-    console.log("1. CV request received");
+    // console.log("1. CV request received");
     // Save visitor details
     const savedRecord = await CVDownloadModel.create({
       name: name.trim(),
@@ -48,13 +48,13 @@ const requestCV = async (req, res) => {
       purpose,
       consent: true,
     });
-    console.log("2. MongoDB record saved:", savedRecord._id);
+    // console.log("2. MongoDB record saved:", savedRecord._id);
 
     // Serve the private CV
     const cvPath = path.join(__dirname, "../private/CV.pdf");
 
-    console.log("3. CV file path:", cvPath);
-    console.log("4. CV file exists:", require("fs").existsSync(cvPath));
+    // console.log("3. CV file path:", cvPath);
+    // console.log("4. CV file exists:", require("fs").existsSync(cvPath));
 
     return res.download(cvPath, "CV-Chandra-Bhooshan.pdf", (error) => {
       if (error) {
