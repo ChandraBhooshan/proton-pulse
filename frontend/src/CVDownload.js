@@ -133,7 +133,7 @@ function CVDownload({ onClose }) {
             <option>Other</option>
           </select>
 
-          <label className="cv-consent">
+          {/* <label className="cv-consent">
             <input
               type="checkbox"
               name="consent"
@@ -145,7 +145,7 @@ function CVDownload({ onClose }) {
               I agree that these details may be stored and used to manage and
               track my CV download request.
             </span>
-          </label>
+          </label> */}
 
           {error && <p className="cv-error">{error}</p>}
 
@@ -154,10 +154,10 @@ function CVDownload({ onClose }) {
           </button>
         </form>
 
-        <p className="cv-privacy">
+        {/* <p className="cv-privacy">
           Your information will be used for CV download tracking and related
           professional communication.
-        </p>
+        </p> */}
       </div>
     </div>
   );
