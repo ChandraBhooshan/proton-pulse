@@ -6,7 +6,6 @@ const AuthRouter = require("./Routes/AuthRouter");
 const ProductRouter = require("./Routes/ProductRouter");
 const NewsletterRouter = require("./Routes/NewsletterRouter");
 const CVRouter = require("./Routes/CVRouter");
-
 require("dotenv").config();
 require("./Models/db");
 const PORT = process.env.PORT || 8080;
