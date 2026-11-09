@@ -32,11 +32,13 @@ function CVDownload({ onClose }) {
     e.preventDefault();
     setError("");
 
-    // if (!form.consent) {
-    //   setError("Please provide consent to continue.");
-    //   return;
-    // }
+    if (!form.consent) {
+      setError("Please provide consent to continue.");
+      return;
+    }
     if (!emailVerified || !verificationToken) {
+      console.log("Email verified:", emailVerified);
+      console.log("Verification token:", verificationToken);
       setError("Please verify your email before downloading.");
       return;
     }
@@ -48,6 +50,8 @@ function CVDownload({ onClose }) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${verificationToken}`,
+
         },
         body: JSON.stringify(form),
       });
@@ -112,7 +116,6 @@ function CVDownload({ onClose }) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${verificationToken}`,
         },
         body: JSON.stringify({
           email: form.email,
@@ -236,7 +239,7 @@ function CVDownload({ onClose }) {
             {/* <option>Other</option> */}
           </select>
 
-          {/* <label className="cv-consent">
+          <label className="cv-consent">
             <input
               type="checkbox"
               name="consent"
@@ -245,10 +248,9 @@ function CVDownload({ onClose }) {
               required
             />
             <span>
-              I agree that these details may be stored and used to manage and
-              track my CV download request.
+              I agree that these details may be stored and used to manage my CV download request.
             </span>
-          </label> */}
+          </label>
 
           {error && <p className="cv-error">{error}</p>}
 
