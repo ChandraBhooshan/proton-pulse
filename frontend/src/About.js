@@ -57,8 +57,12 @@
 
 import "./About.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
+// import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+// import React, { useState } from "react";
+import { useState } from "react";
+
 import CVDownload from "./CVDownload";
 
 function About() {
