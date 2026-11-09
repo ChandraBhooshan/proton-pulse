@@ -57,10 +57,9 @@
 
 import "./About.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faDownload,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
+import CVDownload from "./CVDownload";
 
 function About() {
   // const skills = [
@@ -71,7 +70,7 @@ function About() {
   //   "Database Management",
   //   "Problem Solving",
   // ];
-
+  const [showCVForm, setShowCVForm] = useState(false);
   return (
     <main className="about-page">
       {/* Hero Section */}
@@ -98,15 +97,25 @@ function About() {
             </p>
 
             <div className="about-actions">
-              <a
+              {/* <a
                 href="/CV.pdf"
                 className="about-btn about-btn-primary"
                 download="CV-Chandra-Bhooshan.pdf"
               >
                 Download CV
                 <FontAwesomeIcon icon={faDownload} />
-              </a>
+              </a> */}
+              <button
+                type="button"
+                className="your-existing-download-button-class"
+                onClick={() => setShowCVForm(true)}
+              >
+                Download CV
+              </button>
 
+              {showCVForm && (
+                <CVDownload onClose={() => setShowCVForm(false)} />
+              )}
               <a
                 href="mailto:cb321784@gmail.com"
                 className="about-btn about-btn-secondary"
