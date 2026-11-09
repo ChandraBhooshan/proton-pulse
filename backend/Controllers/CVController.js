@@ -41,7 +41,7 @@ const requestCV = async (req, res) => {
     // Before saving
     console.log("1. CV request received");
     // Save visitor details
-    await CVDownloadModel.create({
+    const savedRecord = await CVDownloadModel.create({
       name: name.trim(),
       email: normalizedEmail,
       organization: organization?.trim() || "",
