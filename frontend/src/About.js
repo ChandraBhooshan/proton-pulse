@@ -60,9 +60,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
   faDownload,
-  faCode,
-  faLaptopCode,
-  faLightbulb,
 } from "@fortawesome/free-solid-svg-icons";
 
 function About() {

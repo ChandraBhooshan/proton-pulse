@@ -47,16 +47,16 @@ function Footer() {
 
           <ul>
             <li>
-              <a href="#">Web Designing</a>
+              <a href="https://protonpulse.in">Web Designing</a>
             </li>
             <li>
-              <a href="#">Java Core, GUI</a>
+              <a href="https://protonpulse.in">Java Core, GUI</a>
             </li>
             <li>
-              <a href="#">Software Development</a>
+              <a href="https://protonpulse.in">Software Development</a>
             </li>
             <li>
-              <a href="#">Project Management</a>
+              <a href="https://protonpulse.in">Project Management</a>
             </li>
           </ul>
         </div>
@@ -67,16 +67,16 @@ function Footer() {
 
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="https://protonpulse.in">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="https://protonpulse.in">About</a>
             </li>
             <li>
-              <a href="#">Careers</a>
+              <a href="https://protonpulse.in">Careers</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="https://protonpulse.in">Contact</a>
             </li>
 
           </ul>
@@ -88,25 +88,25 @@ function Footer() {
 
           <ul>
             <li>
-              <a href="#">
+              <a href="https://protonpulse.in">
                 <i className="fab fa-facebook"></i> Facebook
               </a>
             </li>
 
             <li>
-              <a href="#">
+              <a href="https://protonpulse.in">
                 <i className="fab fa-github"></i> Github
               </a>
             </li>
 
             <li>
-              <a href="#">
+              <a href="https://protonpulse.in">
                 <i className="fab fa-linkedin"></i> Linkedin
               </a>
             </li>
 
             <li>
-              <a href="#">
+              <a href="https://protonpulse.in">
                 <i className="fab fa-instagram"></i> Instagram
               </a>
             </li>
