@@ -34,7 +34,7 @@ function Footer() {
           <hr />
 
           <p>
-            I am a motivated and versatile Web Developer, with passion for
+            I am a motivated and versatile Developer, with passion for
             delivering high-quality results. I am dedicated to learning. With a
             positive attitude I am ready to make a meaningful contribution and
             achieve great things.
