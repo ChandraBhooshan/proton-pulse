@@ -1,7 +1,40 @@
 const path = require("path");
 const CVDownloadModel = require("../Models/CVDownloadModel");
-
+const jwt = require("jsonwebtoken");
 const requestCV = async (req, res) => {
+  const authHeader = req.headers.authorization;
+  const token = authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : null;
+
+  if (!token) {
+    return res.status(401).json({
+      success: false,
+      message: "Please verify your email first.",
+    });
+  }
+
+  let verifiedEmail;
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    if (decoded.purpose !== "cv-download") {
+      throw new Error("Invalid token purpose");
+    }
+
+    verifiedEmail = decoded.email;
+  } catch {
+    return res.status(401).json({
+      success: false,
+      message: "Email verification expired. Please verify again.",
+    });
+  }
+
+  if (verifiedEmail !== req.body.email?.trim().toLowerCase()) {
+    return res.status(403).json({
+      success: false,
+      message: "Verified email does not match the submitted email.",
+    });
+  }
   try {
     const { name, email, organization, purpose, consent } = req.body;
 

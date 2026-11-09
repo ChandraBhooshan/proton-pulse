@@ -14,7 +14,11 @@ function CVDownload({ onClose }) {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-
+  const [otp, setOtp] = useState("");
+  const [otpSent, setOtpSent] = useState(false);
+  const [emailVerified, setEmailVerified] = useState(false);
+  const [verificationToken, setVerificationToken] = useState("");
+  const [otpLoading, setOtpLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value, checked, type } = e.target;
 
@@ -28,8 +32,12 @@ function CVDownload({ onClose }) {
     e.preventDefault();
     setError("");
 
-    if (!form.consent) {
-      setError("Please provide consent to continue.");
+    // if (!form.consent) {
+    //   setError("Please provide consent to continue.");
+    //   return;
+    // }
+    if (!emailVerified || !verificationToken) {
+      setError("Please verify your email before downloading.");
       return;
     }
 
@@ -69,6 +77,62 @@ function CVDownload({ onClose }) {
     }
   };
 
+  const handleSendOTP = async () => {
+    try {
+      setOtpLoading(true);
+      setError("");
+
+      const response = await fetch(`${API_URL}/api/cv/send-otp`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: form.email }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) throw new Error(result.message);
+
+      setOtpSent(true);
+      setEmailVerified(false);
+      setVerificationToken("");
+      setOtp("");
+      alert(result.message);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setOtpLoading(false);
+    }
+  };
+  const handleVerifyOTP = async () => {
+    try {
+      setOtpLoading(true);
+      setError("");
+
+      const response = await fetch(`${API_URL}/api/cv/verify-otp`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${verificationToken}`,
+        },
+        body: JSON.stringify({
+          email: form.email,
+          otp,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) throw new Error(result.message);
+
+      setVerificationToken(result.verificationToken);
+      setEmailVerified(true);
+      setError("");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setOtpLoading(false);
+    }
+  };
   return (
     <div className="cv-modal-overlay" onClick={onClose}>
       <div className="cv-modal" onClick={(e) => e.stopPropagation()}>
@@ -105,10 +169,49 @@ function CVDownload({ onClose }) {
             type="email"
             value={form.email}
             onChange={handleChange}
-            placeholder="you@example.com"
+            disabled={otpSent}
             required
           />
+          {!emailVerified && (
+            <>
+              <button
+                type="button"
+                onClick={handleSendOTP}
+                disabled={otpLoading || !form.email.trim()}
+              >
+                {otpLoading
+                  ? "Sending..."
+                  : otpSent
+                    ? "Resend OTP"
+                    : "Send OTP"}
+              </button>
 
+              {otpSent && (
+                <>
+                  <label>Enter 6-digit OTP</label>
+                  <input
+                    value={otp}
+                    onChange={(e) => setOtp(e.target.value)}
+                    placeholder="Enter email verification code"
+                    maxLength={6}
+                    inputMode="numeric"
+                  />
+
+                  <button
+                    type="button"
+                    onClick={handleVerifyOTP}
+                    disabled={otpLoading || otp.length !== 6}
+                  >
+                    {otpLoading ? "Verifying..." : "Verify Email"}
+                  </button>
+                </>
+              )}
+            </>
+          )}
+
+          {emailVerified && (
+            <p style={{ color: "green" }}>✓ Email verified successfully</p>
+          )}
           <label htmlFor="cv-organization">Organization (Optional)</label>
           <input
             id="cv-organization"
@@ -149,7 +252,14 @@ function CVDownload({ onClose }) {
 
           {error && <p className="cv-error">{error}</p>}
 
-          <button type="submit" className="cv-submit" disabled={loading}>
+          {/* <button type="submit" className="cv-submit" disabled={loading}>
+            {loading ? "Preparing CV..." : "Submit and Download CV"}
+          </button> */}
+          <button
+            type="submit"
+            className="cv-submit"
+            disabled={loading || !emailVerified}
+          >
             {loading ? "Preparing CV..." : "Submit and Download CV"}
           </button>
         </form>

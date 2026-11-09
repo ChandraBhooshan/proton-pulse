@@ -9,6 +9,7 @@ const CVRouter = require("./Routes/CVRouter");
 require("dotenv").config();
 require("./Models/db");
 const PORT = process.env.PORT || 8080;
+const CVEmailOTPRouter = require("./Routes/CVEmailOTPRouter");
 
 app.get("/ping", (req, res) => {
   res.send("PONG");
@@ -21,6 +22,7 @@ app.use("/signup-login/auth", AuthRouter);
 app.use("/signup-login/products", ProductRouter);
 app.use("/api/cv", CVRouter);
 
+app.use("/api/cv", CVEmailOTPRouter);
 // Local development server
 if (require.main === module) {
   app.listen(PORT, () => {
