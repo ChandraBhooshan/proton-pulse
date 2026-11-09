@@ -83,7 +83,7 @@ function CVDownload({ onClose }) {
 
         <div className="cv-modal-heading">
           <h2>Download My CV</h2>
-          <p>Please share a few details before downloading.</p>
+          {/* <p>Please share a few details before downloading.</p> */}
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -130,7 +130,7 @@ function CVDownload({ onClose }) {
             <option>Recruitment</option>
             <option>Professional networking</option>
             <option>Academic reference</option>
-            <option>Other</option>
+            {/* <option>Other</option> */}
           </select>
 
           {/* <label className="cv-consent">
