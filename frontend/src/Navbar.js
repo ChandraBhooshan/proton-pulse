@@ -31,7 +31,7 @@ function Navbar() {
             Blog
           </Link>
           <button type="" className="nav-button">
-            +91 955--507
+            +91 9554040507
             <span>
               <FontAwesomeIcon icon={faPhone} className="callPhone" />
             </span>
