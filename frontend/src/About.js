@@ -121,7 +121,7 @@ function About() {
                 <CVDownload onClose={() => setShowCVForm(false)} />
               )}
               <a
-                href="mailto:cb321784@gmail.com"
+                href="mailto:chandrabhooshanjnvsn@gmail.com"
                 className="about-btn about-btn-secondary"
               >
                 Get in Touch

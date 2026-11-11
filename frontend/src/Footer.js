@@ -35,7 +35,7 @@ function Footer() {
 
           <p>
             I am a motivated and versatile Developer, with passion for
-            delivering high-quality results. I am dedicated to learning. With a
+            delivering best-quality results. I am dedicated to learning. With a
             positive attitude I am ready to make a meaningful contribution and
             achieve great things.
           </p>
@@ -47,10 +47,10 @@ function Footer() {
 
           <ul>
             <li>
-              <a href="https://protonpulse.in">Web Designing</a>
+              <a href="https://protonpulse.in">Designing</a>
             </li>
             <li>
-              <a href="https://protonpulse.in">Java Core, GUI</a>
+              <a href="https://protonpulse.in">Python Core, GUI</a>
             </li>
             <li>
               <a href="https://protonpulse.in">Software Development</a>
@@ -115,7 +115,7 @@ function Footer() {
       </div>
 
       <div id="copyright">
-        {/* &copy; {new Date().getFullYear()} ProtonPulse Inc. All rights reserved. */}
+        &copy; {new Date().getFullYear()} ProtonPulse Inc. All rights reserved.
       </div>
     </footer>
   );
