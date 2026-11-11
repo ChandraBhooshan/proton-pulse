@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./CVDownload.css";
+import API_URL from "./config.js";
 
-const API_URL = "http://localhost:8080";
+// const API_URL = "http://localhost:8080";
 
 function CVDownload({ onClose }) {
   const [form, setForm] = useState({
