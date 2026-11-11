@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
 import './signup-login.css';
+import API_URL from "./config";
 
 function Signup() {
   const [signupInfo, setSignupInfo] = useState({
@@ -28,9 +29,9 @@ function Signup() {
     }
     try {
       // const url = `http://localhost:8080/auth/signup`;
-      const url = `https://proton-pulse.vercel.app/signup-login/auth/signup`;
+      // const url = `https://proton-pulse.vercel.app/signup-login/auth/signup`; // worked
       // const url = `http://localhost:8080/signup-login/auth/signup`;
-      // const url = `${API_URL}/signup-login/auth/signup`;
+      const url = `${API_URL}/signup-login/auth/signup`;
       const response = await fetch(url, {
         method: "POST",
         headers: {

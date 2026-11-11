@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
 import "./signup-login.css";
+import API_URL from "./config";
 
 function Login() {
   const [loginInfo, setLoginInfo] = useState({
@@ -30,9 +31,9 @@ function Login() {
       // const url = `https://deploy-mern-app-1-api.vercel.app/auth/login`;
       // const url = `http://localhost:8080/auth/login`;
       // const url = `https://www.protonpulse.in/login-me/auth/login`;
-      const url = `https://proton-pulse.vercel.app/signup-login/auth/login`;
+      // const url = `https://proton-pulse.vercel.app/signup-login/auth/login`; // worked
       // const url = `http://localhost:8080/signup-login/auth/login`;
-      // const url = `${API_URL}/signup-login/auth/login`;
+      const url = `${API_URL}/signup-login/auth/login`;
       // https://proton-pulse.vercel.app/
 
       const response = await fetch(url, {
