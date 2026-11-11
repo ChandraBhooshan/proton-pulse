@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./Newsletter.css";
-// import API_URL from "./config";
 
 function Newsletter() {
   const [email, setEmail] = useState("");
