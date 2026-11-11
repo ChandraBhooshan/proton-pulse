@@ -23,11 +23,11 @@ const Home = () => {
           <div className="hero-tech">
             {/* <p>POWERED BY MODERN TECHNOLOGY</p> */}
             <div className="tech-icons">
-              <span>🤖</span>
+              {/* <span>🤖</span>
               <span>☁️</span>
               <span>⚡</span>
               <span>💻</span>
-              <span>🔐</span>
+              <span>🔐</span> */}
             </div>
             {/* <small>AI · Cloud · Automation · Software · Security</small> */}
           </div>
