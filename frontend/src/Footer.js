@@ -115,7 +115,8 @@ function Footer() {
       </div>
 
       <div id="copyright">
-        &copy; {new Date().getFullYear()} ProtonPulse Inc. All rights reserved.
+        &copy; {new Date().getFullYear()} Made with curiosity .
+        {/* ProtonPulse Inc. All rights reserved. */}
       </div>
     </footer>
   );

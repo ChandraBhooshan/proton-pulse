@@ -1,6 +1,6 @@
 import "./home.css";
 import Footer from "./Footer.js";
-
+import Parallax from "./modules/parallax/Parallax";
 const Home = () => {
   return (
     <div className="proton-home">
@@ -12,12 +12,24 @@ const Home = () => {
             <span className="neon-text">Intelligent Technology</span>
           </h1>
           <p className="hero-subtitle">
-            ProtonPulse helps businesses innovate faster through AI, cloud
-            computing, and next-generation software solutions.
+            ProtonPulse helps businesses innovate faster through AI, software
+            programming, and next-generation software solutions.
           </p>
-          <div className="hero-actions">
+          {/* <div className="hero-actions">
             <button className="btn btn-primary">Get Started</button>
             <button className="btn btn-secondary">Learn More</button>
+          </div> */}
+
+          <div className="hero-tech">
+            {/* <p>POWERED BY MODERN TECHNOLOGY</p> */}
+            <div className="tech-icons">
+              <span>🤖</span>
+              <span>☁️</span>
+              <span>⚡</span>
+              <span>💻</span>
+              <span>🔐</span>
+            </div>
+            {/* <small>AI · Cloud · Automation · Software · Security</small> */}
           </div>
         </div>
         <div className="hero-illustration">
@@ -29,19 +41,19 @@ const Home = () => {
           {/* </div> */}
         </div>
       </section>
-
+      <Parallax />
       {/* 2. Trusted By Section */}
-      <section className="trusted-section">
+      {/* <section className="trusted-section">
         <p>Trusted by innovative teams worldwide</p>
-        <div className="logo-ticker">
-          {/* Placeholders for client logos */}
-          <span>Acme Corp</span>
+        <div className="logo-ticker"> */}
+      {/* Placeholders for client logos */}
+      {/* <span>Acme Corp</span>
           <span>GlobalTech</span>
           <span>Nexus</span>
           <span>Stellar</span>
           <span>AeroDynamics</span>
         </div>
-      </section>
+      </section> */}
 
       {/* 3. Services Section */}
       {/* <section className="services-section">
@@ -61,7 +73,7 @@ const Home = () => {
       </section> */}
 
       {/* 4. Features Section */}
-      <section className="features-section">
+      {/* <section className="features-section">
         <h2>Why We Stand Out</h2>
         <div className="grid-container">
           {featuresData.map((feature, index) => (
@@ -71,10 +83,10 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* 5. Why Choose ProtonPulse */}
-      <section className="why-choose-section">
+      {/* <section className="why-choose-section">
         <div className="split-layout">
           <div className="split-text">
             <h2>Transforming Industries</h2>
@@ -102,10 +114,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 6. Product Showcase */}
-      <section className="product-showcase">
+      {/* <section className="product-showcase">
         <h2>Featured Platform</h2>
         <div className="product-mockup">
           <div className="mockup-screen">
@@ -124,25 +136,25 @@ const Home = () => {
             <button className="btn btn-primary">Explore Product</button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 7. Testimonials */}
-      <section className="testimonials-section">
+      {/* <section className="testimonials-section">
         <h2>What Our Clients Say</h2>
         <div className="testimonial-card">
           <p className="quote">
             "ProtonPulse completely overhauled our legacy cloud infrastructure.
             The speed and security improvements are night and day."
           </p>
-          <div className="author">
-            <div className="author-avatar"></div>
-            <div>
+          <div className="author"> */}
+      {/* <div className="author-avatar"></div> */}
+      {/* <div>
               <h4>Sarah Jenkins</h4>
-              <p>CTO, Nexus Corp</p>
+              <p>CTO, ABC Corp</p>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 8. Pricing Preview */}
       {/* <section className="pricing-section">
@@ -172,12 +184,12 @@ const Home = () => {
       </section> */}
 
       {/* 9. Call-To-Action */}
-      <section className="cta-section">
+      {/* <section className="cta-section">
         <h2>Ready to Accelerate Your Digital Journey?</h2>
         <button className="btn btn-primary btn-large">
           Book a Free Consultation
         </button>
-      </section>
+      </section> */}
 
       {/* 10. Footer */}
       <Footer />

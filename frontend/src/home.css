@@ -100,6 +100,34 @@ h2 {
   gap: 32px;
 }
 
+.hero-tech {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+
+
+.tech-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.tech-icons span {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+  background: #f5f0ff;
+  border: 1px solid #eee5ff;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(120, 50, 180, 0.08);
+}
+
+
+
 .card {
   background: var(--bg-card);
   border: 1px solid rgba(255, 255, 255, 0.05);

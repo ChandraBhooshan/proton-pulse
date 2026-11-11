@@ -1,0 +1,218 @@
+.parallax-page {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.parallax-page #top {
+  /* background-color: rgb(148, 224, 188); */
+  background: linear-gradient(
+    to right,
+    rgba(153, 38, 240, 0.95),
+    rgba(249, 84, 84, 0.75)
+  );
+  /* opacity: 0.5; */
+  margin: 0;
+  padding: 10px 10px;
+}
+
+.parallax-page .image1,
+.parallax-page .image2,
+.parallax-page .image3 {
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.parallax-page .image1 {
+  background: url("./images/winter1.jpg") no-repeat fixed center;
+  background-size: cover;
+}
+
+.parallax-page .image2 {
+  background: url("./images/image2.jpg") no-repeat fixed center center;
+  background-size: cover;
+}
+
+.parallax-page .image3 {
+  background: url("./images/image3.jpg") no-repeat fixed center center;
+  background-size: cover;
+}
+
+.parallax-page .common {
+  /* background-color: rgb(148, 224, 188); */
+  background: linear-gradient(
+    to right,
+    rgba(153, 38, 240, 0.95),
+    rgba(249, 84, 84, 0.75)
+  );
+  margin: 0;
+  text-align: center;
+  padding: 0px 10px;
+}
+
+@media (max-width: 768px) {
+  .parallax-page .image1,
+  .parallax-page .image2,
+  .parallax-page .image3 {
+    background-attachment: scroll;
+  }
+}
+
+/* .parallax-page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+} */
+
+/* Hero */
+/* .parallax-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
+    url("./images/winter1.jpg") center/cover no-repeat fixed;
+  padding: 30px;
+} */
+
+/* .hero-content {
+  max-width: 850px;
+}
+
+.hero-tag,
+.section-label {
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: #a8e6cf;
+} */
+
+/* .hero-content h1 {
+  font-size: clamp(38px, 7vw, 76px);
+  line-height: 1.1;
+  margin: 22px 0;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 19px;
+  color: #eeeeee;
+  margin-bottom: 35px;
+} */
+
+/* .hero-button {
+  display: inline-block;
+  padding: 14px 30px;
+  border: 1px solid white;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background: white;
+  color: #222;
+} */
+
+/* Text sections */
+/* .intro-section {
+  background: #e9f5ef;
+  color: #24352d;
+  text-align: center;
+  padding: 85px 10%;
+}
+
+.intro-section h2 {
+  font-size: clamp(27px, 4vw, 42px);
+  margin: 18px 0;
+} */
+
+/* .intro-section p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #58675f;
+} */
+
+/* Parallax image sections */
+/* .parallax-image {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+} */
+
+/* .parallax-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+.image-one {
+  background-image: url("./images/winter1.jpg");
+} */
+
+/* .image-two {
+  background-image: url("./images/image2.jpg");
+}
+
+.image-three {
+  background-image: url("./images/image3.jpg");
+}
+
+.image-caption {
+  position: relative;
+  z-index: 1;
+  padding: 25px;
+}
+
+.image-caption h2 {
+  font-size: clamp(32px, 5vw, 55px);
+  margin-bottom: 12px;
+} */
+
+/* .image-caption p {
+  font-size: 18px;
+  color: #eeeeee;
+} */
+
+/* Footer */
+/* .parallax-footer {
+  background: #182820;
+  color: #c9d8cf;
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 14px;
+} */
+
+/* Mobile */
+/* @media (max-width: 768px) {
+  .parallax-hero {
+    min-height: 75vh;
+    background-attachment: scroll;
+  }
+
+  .parallax-image {
+    min-height: 55vh;
+    background-attachment: scroll;
+  }
+
+  .intro-section {
+    padding: 60px 7%;
+  }
+} */
