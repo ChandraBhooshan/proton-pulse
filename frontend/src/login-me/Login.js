@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
 import "./signup-login.css";
-import API_URL from "./config";
+import API_URL from "../config.js";
 
 function Login() {
   const [loginInfo, setLoginInfo] = useState({
