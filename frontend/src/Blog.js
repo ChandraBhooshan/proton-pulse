@@ -2,19 +2,19 @@ function Blog() {
   const blogPosts = [
     {
       id: 1,
-      title: "Getting Started with React",
+      title: "Getting Started with Software",
       author: "Buddy",
       date: "May 26, 2026",
       content:
-        "React is a powerful JavaScript library used to build modern user interfaces. It allows developers to create reusable components and build fast, interactive web applications.",
+        "Software development is the process of designing, building, and maintaining software applications. It involves various stages from planning to deployment.",
     },
     {
       id: 2,
-      title: "Why Components Matter",
+      title: "Why Software Engineering Matters",
       author: "Buddy",
       date: "May 24, 2026",
       content:
-        "Components help organize UI into reusable blocks. This makes applications easier to maintain, scale, and debug.",
+        "Software engineering principles help ensure that applications are well-structured, maintainable, and scalable.",
     },
   ];
 
