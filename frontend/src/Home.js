@@ -21,7 +21,6 @@ const Home = () => {
           </div> */}
 
           <div className="hero-tech">
-            {/* <p>POWERED BY MODERN TECHNOLOGY</p> */}
             <div className="tech-icons">
               {/* <span>🤖</span>
               <span>☁️</span>
@@ -29,7 +28,6 @@ const Home = () => {
               <span>💻</span>
               <span>🔐</span> */}
             </div>
-            {/* <small>AI · Cloud · Automation · Software · Security</small> */}
           </div>
         </div>
         <div className="hero-illustration">
@@ -41,7 +39,7 @@ const Home = () => {
           {/* </div> */}
         </div>
       </section>
-      <Parallax />
+      {/* <Parallax /> */}
       {/* 2. Trusted By Section */}
       {/* <section className="trusted-section">
         <p>Trusted by innovative teams worldwide</p>
