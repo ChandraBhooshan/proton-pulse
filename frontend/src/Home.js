@@ -22,11 +22,11 @@ const Home = () => {
 
           <div className="hero-tech">
             <div className="tech-icons">
-              {/* <span>🤖</span>
+              <span>🤖</span>
               <span>☁️</span>
               <span>⚡</span>
               <span>💻</span>
-              <span>🔐</span> */}
+              <span>🔐</span>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@ const Home = () => {
           {/* </div> */}
         </div>
       </section>
-      {/* <Parallax /> */}
+      <Parallax />
       {/* 2. Trusted By Section */}
       {/* <section className="trusted-section">
         <p>Trusted by innovative teams worldwide</p>
