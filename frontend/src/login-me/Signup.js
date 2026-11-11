@@ -28,8 +28,8 @@ function Signup() {
     }
     try {
       // const url = `http://localhost:8080/auth/signup`;
-      // const url = `https://proton-pulse.vercel.app/signup-login/auth/signup`;
-      const url = `http://localhost:8080/signup-login/auth/signup`;
+      const url = `https://proton-pulse.vercel.app/signup-login/auth/signup`;
+      // const url = `http://localhost:8080/signup-login/auth/signup`;
       // const url = `${API_URL}/signup-login/auth/signup`;
       const response = await fetch(url, {
         method: "POST",
