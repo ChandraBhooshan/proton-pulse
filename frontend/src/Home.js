@@ -22,11 +22,7 @@ const Home = () => {
 
           <div className="hero-tech">
             <div className="tech-icons">
-              <span>🤖</span>
-              <span>☁️</span>
-              <span>⚡</span>
-              <span>💻</span>
-              <span>🔐</span>
+
             </div>
           </div>
         </div>
