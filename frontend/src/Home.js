@@ -22,7 +22,11 @@ const Home = () => {
 
           <div className="hero-tech">
             <div className="tech-icons">
-
+              <span>🤖</span>
+              <span>☁️</span>
+              <span>⚡</span>
+              <span>💻</span>
+              <span>🔐</span>
             </div>
           </div>
         </div>
@@ -226,14 +230,14 @@ const Home = () => {
 //   },
 // ];
 
-const featuresData = [
-  { title: "Scalable Architecture" },
-  { title: "Real-Time Analytics" },
-  { title: "Enterprise Security" },
-  { title: "Lightning Fast Performance" },
-  { title: "24/7 Support" },
-  { title: "Global Infrastructure" },
-];
+// const featuresData = [
+//   { title: "Scalable Architecture" },
+//   { title: "Real-Time Analytics" },
+//   { title: "Enterprise Security" },
+//   { title: "Lightning Fast Performance" },
+//   { title: "24/7 Support" },
+//   { title: "Global Infrastructure" },
+// ];
 
 // const pricingData = [
 //   { title: "Starter", price: "$49/mo", isPopular: false },
