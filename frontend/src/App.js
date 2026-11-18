@@ -164,8 +164,8 @@ function NavbarControl() {
 }
 
 // Redirect invalid quiz navigation to landing page.
-function QuizRedirect() {
-  return <Navigate to="/work/quiz" replace />;
-}
+// function QuizRedirect() {
+//   return <Navigate to="/work/quiz" replace />;
+// }
 
 export default App;
