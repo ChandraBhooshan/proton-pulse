@@ -14,6 +14,7 @@ function Signup() {
 
   const navigate = useNavigate();
   const location = useLocation();
+  const [alreadyLoggedIn, setAlreadyLoggedIn] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,6 +30,8 @@ function Signup() {
     const token = localStorage.getItem("token");
 
     if (token) {
+      setAlreadyLoggedIn(true);
+
       handleSuccess(
         "You are already logged in with an account. Redirecting to your dashboard.",
       );
@@ -40,6 +43,10 @@ function Signup() {
           replace: true,
         });
       }, 2000);
+      if (alreadyLoggedIn) {
+        return <ToastContainer />;
+      }
+
       return () => clearTimeout(timer);
     }
   }, [navigate, redirectTo]);

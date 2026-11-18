@@ -13,23 +13,46 @@ function Login() {
 
   const navigate = useNavigate();
   const location = useLocation();
+  const [alreadyLoggedIn, setAlreadyLoggedIn] = useState(false);
 
   const redirectTo = new URLSearchParams(location.search).get("redirect");
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token");
+
+  //   if (token) {
+  //     handleSuccess(
+  //       "You are already logged in with an account. Redirecting to your dashboard.",
+  //     );
+  //     // navigate(redirectTo || "/signup-login/home", {
+  //     //   replace: true,
+  //     // });
+  //     const timer = setTimeout(() => {
+  //       navigate(redirectTo || "/signup-login/home", {
+  //         replace: true,
+  //       });
+  //     }, 2000);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [navigate, redirectTo]);
   useEffect(() => {
     const token = localStorage.getItem("token");
 
     if (token) {
+      setAlreadyLoggedIn(true);
+
       handleSuccess(
-        "You are already logged in with an account. Redirecting to your dashboard.",
+        "You are already logged in. Redirecting to your dashboard.",
       );
-      // navigate(redirectTo || "/signup-login/home", {
-      //   replace: true,
-      // });
+
       const timer = setTimeout(() => {
         navigate(redirectTo || "/signup-login/home", {
           replace: true,
         });
       }, 2000);
+      if (alreadyLoggedIn) {
+        return <ToastContainer />;
+      }
+
       return () => clearTimeout(timer);
     }
   }, [navigate, redirectTo]);
