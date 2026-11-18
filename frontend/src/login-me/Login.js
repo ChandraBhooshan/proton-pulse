@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
@@ -15,6 +15,15 @@ function Login() {
   const location = useLocation();
 
   const redirectTo = new URLSearchParams(location.search).get("redirect");
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      navigate(redirectTo || "/signup-login/home", {
+        replace: true,
+      });
+    }
+  }, [navigate, redirectTo]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { handleError, handleSuccess } from "./support-files/utils";
 import { ToastContainer } from "react-toastify";
-import './signup-login.css';
-
+import "./signup-login.css";
 
 function LoginHome() {
   const [loggedInUser, setLoggedInUser] = useState("");
@@ -13,12 +12,24 @@ function LoginHome() {
     setLoggedInUser(localStorage.getItem("loggedInUser"));
   }, []);
 
-  const handleLogout = (e) => {
+  // const handleLogout = (e) => {
+  //   localStorage.removeItem("token");
+  //   localStorage.removeItem("loggedInUser");
+  //   handleSuccess("User Loggedout");
+  //   setTimeout(() => {
+  //     navigate("/signup-login/login");
+  //   }, 1000);
+  // };
+  const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("jwtToken");
     localStorage.removeItem("loggedInUser");
-    handleSuccess("User Loggedout");
+    localStorage.removeItem("user");
+
+    handleSuccess("User Logged out");
+
     setTimeout(() => {
-      navigate("/signup-login/login");
+      navigate("/work", { replace: true });
     }, 1000);
   };
 
