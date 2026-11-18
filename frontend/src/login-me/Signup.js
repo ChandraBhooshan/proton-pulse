@@ -29,6 +29,9 @@ function Signup() {
     const token = localStorage.getItem("token");
 
     if (token) {
+      handleSuccess(
+        "You are already logged in with an account. Redirecting to your dashboard.",
+      );
       navigate(redirectTo || "/signup-login/home", {
         replace: true,
       });
