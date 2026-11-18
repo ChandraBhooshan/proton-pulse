@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
 import "./signup-login.css";
 import API_URL from "../config.js";
+import "react-toastify/dist/ReactToastify.css";
 
 function Signup() {
   const [signupInfo, setSignupInfo] = useState({

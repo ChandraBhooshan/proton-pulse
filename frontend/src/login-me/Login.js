@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
 import "./signup-login.css";
 import API_URL from "../config.js";
+import "react-toastify/dist/ReactToastify.css";
 
 function Login() {
   const [loginInfo, setLoginInfo] = useState({
@@ -13,27 +14,9 @@ function Login() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const [alreadyLoggedIn, setAlreadyLoggedIn] = useState(false);
-
+  const [alreadyLoggedIn, setAlreadyLoggedIn] = useState(false); 
   const redirectTo = new URLSearchParams(location.search).get("redirect");
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
 
-  //   if (token) {
-  //     handleSuccess(
-  //       "You are already logged in with an account. Redirecting to your dashboard.",
-  //     );
-  //     // navigate(redirectTo || "/signup-login/home", {
-  //     //   replace: true,
-  //     // });
-  //     const timer = setTimeout(() => {
-  //       navigate(redirectTo || "/signup-login/home", {
-  //         replace: true,
-  //       });
-  //     }, 2000);
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [navigate, redirectTo]);
   useEffect(() => {
     const token = localStorage.getItem("token");
 
@@ -44,6 +27,9 @@ function Login() {
         "You are already logged in. Redirecting to your dashboard.",
       );
 
+      // navigate(redirectTo || "/signup-login/home", {
+      //   replace: true,
+      // });
       const timer = setTimeout(() => {
         navigate(redirectTo || "/signup-login/home", {
           replace: true,
