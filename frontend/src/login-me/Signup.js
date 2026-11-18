@@ -35,6 +35,7 @@ function Signup() {
       navigate(redirectTo || "/signup-login/home", {
         replace: true,
       });
+      return () => clearTimeout(timer);
     }
   }, [navigate, redirectTo]);
   const handleSignup = async (e) => {
