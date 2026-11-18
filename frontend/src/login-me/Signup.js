@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
 import "./signup-login.css";
 import API_URL from "../config.js";
-import "react-toastify/dist/ReactToastify.css";
+
 
 function Signup() {
   const [signupInfo, setSignupInfo] = useState({
@@ -15,7 +15,7 @@ function Signup() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const [alreadyLoggedIn, setAlreadyLoggedIn] = useState(false);
+  // const [alreadyLoggedIn, setAlreadyLoggedIn] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,21 +31,21 @@ function Signup() {
     const token = localStorage.getItem("token");
 
     if (token) {
-      setAlreadyLoggedIn(true);
+      // setAlreadyLoggedIn(true);
 
-      handleSuccess(
-        "You are already logged in with an account. Redirecting to your dashboard.",
-      );
-      // navigate(redirectTo || "/signup-login/home", {
-      //   replace: true,
-      // });
-      const timer = setTimeout(() => {
-        navigate(redirectTo || "/signup-login/home", {
-          replace: true,
-        });
-      }, 2000);
+      // handleSuccess(
+      //   "You are already logged in with an account. Redirecting to your dashboard.",
+      // );
+      navigate(redirectTo || "/signup-login/home", {
+        replace: true,
+      });
+      // const timer = setTimeout(() => {
+      //   navigate(redirectTo || "/signup-login/home", {
+      //     replace: true,
+      //   });
+      // }, 2000);
 
-      return () => clearTimeout(timer);
+      // return () => clearTimeout(timer);
     }
   }, [navigate, redirectTo]);
   const handleSignup = async (e) => {
@@ -89,9 +89,9 @@ function Signup() {
       handleError(err);
     }
   };
-  if (alreadyLoggedIn) {
-    return <ToastContainer />;
-  }
+  // if (alreadyLoggedIn) {
+  //   return <ToastContainer />;
+  // }
   return (
     <div className="container">
       <h1>Signup</h1>

@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
 import "./signup-login.css";
 import API_URL from "../config.js";
-import "react-toastify/dist/ReactToastify.css";
+
 
 function Login() {
   const [loginInfo, setLoginInfo] = useState({
@@ -14,29 +14,29 @@ function Login() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const [alreadyLoggedIn, setAlreadyLoggedIn] = useState(false); 
-  const redirectTo = new URLSearchParams(location.search).get("redirect");
+  // const [alreadyLoggedIn, setAlreadyLoggedIn] = useState(false);
 
+  const redirectTo = new URLSearchParams(location.search).get("redirect");
   useEffect(() => {
     const token = localStorage.getItem("token");
 
     if (token) {
-      setAlreadyLoggedIn(true);
+      // setAlreadyLoggedIn(true);
 
-      handleSuccess(
-        "You are already logged in. Redirecting to your dashboard.",
-      );
+      // handleSuccess(
+      //   "You are already logged in. Redirecting to your dashboard.",
+      // );
 
-      // navigate(redirectTo || "/signup-login/home", {
-      //   replace: true,
-      // });
-      const timer = setTimeout(() => {
-        navigate(redirectTo || "/signup-login/home", {
-          replace: true,
-        });
-      }, 2000);
+      navigate(redirectTo || "/signup-login/home", {
+        replace: true,
+      });
+      // const timer = setTimeout(() => {
+      //   navigate(redirectTo || "/signup-login/home", {
+      //     replace: true,
+      //   });
+      // }, 2000);
 
-      return () => clearTimeout(timer);
+      // return () => clearTimeout(timer);
     }
   }, [navigate, redirectTo]);
 
@@ -94,9 +94,9 @@ function Login() {
     }
   };
   // Hide the login form while redirecting an already logged-in user
-  if (alreadyLoggedIn) {
-    return <ToastContainer />;
-  }
+  // if (alreadyLoggedIn) {
+  //   return <ToastContainer />;
+  // }
 
   return (
     <div className="container">
