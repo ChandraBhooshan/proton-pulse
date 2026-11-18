@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
-import './signup-login.css';
+import "./signup-login.css";
 import API_URL from "../config.js";
 
 function Signup() {
@@ -13,6 +13,7 @@ function Signup() {
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
   const handleChange = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
@@ -43,8 +44,13 @@ function Signup() {
       const { success, message, error } = result;
       if (success) {
         handleSuccess(message);
+        // setTimeout(() => {
+        //   navigate("/signup-login/login");
+        // }, 1000);
         setTimeout(() => {
-          navigate("/signup-login/login");
+          navigate(`/signup-login/login${location.search}`, {
+            replace: true,
+          });
         }, 1000);
       } else if (error) {
         const details = error?.details[0].message;
@@ -94,7 +100,9 @@ function Signup() {
         </div>
         <button type="submit">Signup</button>
         <span>
-          Already have an account ?<Link to="/signup-login/login">Login</Link>
+          Already have an account ?
+          {/* <Link to="/signup-login/login">Login</Link> */}
+          <Link to={`/signup-login/login${location.search}`}>Login</Link>
         </span>
       </form>
       <ToastContainer />

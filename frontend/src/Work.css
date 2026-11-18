@@ -35,11 +35,24 @@
 
 /* Feature grid - future modules */
 
-.work-feature-grid {
+/* .work-feature-grid {
   column-count: 3;
   column-gap: 24px;
   width: 100%;
+} */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
 }
+/* .work-column { */
+/* display: flex; */
+/* flex-direction: column; */
+/* gap: 20px; */
+/* min-width: 0; */
+/* align-self: start; */
+/* } */
 
 /* Individual Feature Cards */
 
@@ -78,14 +91,38 @@
   font-size: 15px;
   line-height: 1.5;
 }
+.google-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.signup-login-module-content {
+  text-align: center;
+}
 
+/* .signup-login-action-button { */
+/* align-items: center; */
+/* padding: 9px 16px; */
+/* background: transparent;
+  color: #9926f0;
+  border: 1px solid #9926f0;
+  border-radius: 7px; */
+/* font-size: 13px; */
+/* font-weight: 600; */
+/* cursor: pointer; */
+/* transition: all 0.25s ease; */
+/* } */
 /* Responsive */
-
 /* Tablet */
 
 @media (max-width: 900px) {
   .work-feature-grid {
     column-count: 2;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 768px) {
@@ -99,6 +136,9 @@
 @media (max-width: 576px) {
   .work-feature-grid {
     column-count: 1;
+  }
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

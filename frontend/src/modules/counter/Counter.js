@@ -18,7 +18,7 @@ function Counter() {
 
   return (
     <div className="counter-widget">
-      <h3>Counter</h3>
+      {/* <h3>Counter</h3> */}
 
       <div className="counter-display">{count}</div>
 

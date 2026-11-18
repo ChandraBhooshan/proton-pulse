@@ -4,12 +4,10 @@
 
 .clock-widget {
   width: 100%;
-  padding: 24px 16px;
+  padding: auto;
   text-align: center;
-
-  background: linear-gradient(135deg, #ffffff, #f7f1ff);
-
-  border: 1px solid rgba(153, 38, 240, 0.15);
+  /* background: linear-gradient(135deg, #ffffff, #f7f1ff); */
+  /* border: 1px solid rgba(153, 38, 240, 0.15); */
   border-radius: 12px;
 }
 

@@ -41,7 +41,7 @@ function Todo() {
 
   return (
     <div className="todo-widget">
-      <h2 className="todo-title">Todo App</h2>
+      {/* <h2 className="todo-title">Todo App</h2> */}
 
       {/* Input section */}
       <div className="todo-input-group">

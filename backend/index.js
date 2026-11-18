@@ -52,6 +52,7 @@ const ProductRouter = require("./Routes/ProductRouter");
 const NewsletterRouter = require("./Routes/NewsletterRouter");
 const CVRouter = require("./Routes/CVRouter");
 const CVEmailOTPRouter = require("./Routes/CVEmailOTPRouter");
+const QuizRouter = require("./Routes/QuizRouter");
 
 // Middleware
 app.use(cors());
@@ -80,6 +81,8 @@ app.use(async (req, res, next) => {
 // Authentication and products
 app.use("/signup-login/auth", AuthRouter);
 app.use("/signup-login/products", ProductRouter);
+// Quiz
+app.use("/api/quiz", QuizRouter);
 
 // Newsletter
 app.use("/api/newsletter", NewsletterRouter);

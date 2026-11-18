@@ -33,10 +33,10 @@ function Clock() {
 
   return (
     <div className="clock-widget">
-      <div className="clock-header">
+      {/* <div className="clock-header">
         <span className="clock-indicator"></span>
         <span>LOCAL TIME</span>
-      </div>
+      </div> */}
 
       <div className="clock-time" aria-live="off">
         {timeString}

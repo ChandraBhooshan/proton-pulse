@@ -1,0 +1,35 @@
+.work-feature-card {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5e5e5;
+}
+
+.work-feature-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.work-feature-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
+}
+
+.work-feature-content.expanded {
+  grid-template-rows: 1fr;
+}
+
+.work-feature-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+}

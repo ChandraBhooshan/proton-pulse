@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./support-files/utils";
 import "./signup-login.css";
@@ -12,6 +12,9 @@ function Login() {
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const redirectTo = new URLSearchParams(location.search).get("redirect");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,7 +53,10 @@ function Login() {
         localStorage.setItem("token", jwtToken);
         localStorage.setItem("loggedInUser", name);
         setTimeout(() => {
-          navigate("/signup-login/home");
+          // navigate("/signup-login/home");
+          navigate(redirectTo || "/signup-login/home", {
+            replace: true,
+          });
         }, 1000);
       } else if (error) {
         const details = error?.details[0].message;
@@ -90,7 +96,16 @@ function Login() {
         </div>
         <button type="submit">Login</button>
         <span>
-          Does't have an account ?<Link to="/signup-login">Signup</Link>
+          Does't have an account ?{/* <Link to="/signup-login">Signup</Link> */}
+          <Link
+            to={
+              redirectTo
+                ? `/signup-login?redirect=${encodeURIComponent(redirectTo)}`
+                : "/signup-login"
+            }
+          >
+            Signup
+          </Link>
         </span>
       </form>
       <ToastContainer />
