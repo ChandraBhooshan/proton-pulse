@@ -32,9 +32,14 @@ function Signup() {
       handleSuccess(
         "You are already logged in with an account. Redirecting to your dashboard.",
       );
-      navigate(redirectTo || "/signup-login/home", {
-        replace: true,
-      });
+      // navigate(redirectTo || "/signup-login/home", {
+      //   replace: true,
+      // });
+      const timer = setTimeout(() => {
+        navigate(redirectTo || "/signup-login/home", {
+          replace: true,
+        });
+      }, 2000);
       return () => clearTimeout(timer);
     }
   }, [navigate, redirectTo]);
