@@ -49,9 +49,6 @@ function Login() {
           replace: true,
         });
       }, 2000);
-      if (alreadyLoggedIn) {
-        return <ToastContainer />;
-      }
 
       return () => clearTimeout(timer);
     }
@@ -110,6 +107,10 @@ function Login() {
       handleError(err);
     }
   };
+  // Hide the login form while redirecting an already logged-in user
+  if (alreadyLoggedIn) {
+    return <ToastContainer />;
+  }
 
   return (
     <div className="container">

@@ -43,9 +43,6 @@ function Signup() {
           replace: true,
         });
       }, 2000);
-      if (alreadyLoggedIn) {
-        return <ToastContainer />;
-      }
 
       return () => clearTimeout(timer);
     }
@@ -91,6 +88,9 @@ function Signup() {
       handleError(err);
     }
   };
+  if (alreadyLoggedIn) {
+    return <ToastContainer />;
+  }
   return (
     <div className="container">
       <h1>Signup</h1>
