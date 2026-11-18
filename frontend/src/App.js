@@ -93,7 +93,6 @@ import {
   Routes,
   Route,
   useLocation,
-  Navigate,
 } from "react-router-dom";
 
 import { StrictMode } from "react";
