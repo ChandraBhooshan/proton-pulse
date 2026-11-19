@@ -49,28 +49,65 @@ function BlogManagement() {
 
   const getToken = () => localStorage.getItem("token");
 
-  const handleAuthError = (status) => {
-    if (status === 401) {
-      localStorage.removeItem("token");
-      localStorage.removeItem("loggedInUser");
+  //   const fetchBlogs = useCallback(async () => {
+  //     const token = getToken();
 
-      navigate(
-        `/signup-login/login?redirect=${encodeURIComponent("/admin/blogs")}`,
-        { replace: true },
-      );
+  //     if (!token) {
+  //       navigate(
+  //         `/signup-login/login?redirect=${encodeURIComponent("/admin/blogs")}`,
+  //         { replace: true },
+  //       );
+  //       return;
+  //     }
 
-      return true;
-    }
+  //     try {
+  //       setLoading(true);
+  //       setError("");
 
-    if (status === 403) {
-      setError(
-        "Admin access required. Your account may not have admin permissions.",
-      );
-      return true;
-    }
+  //       const response = await fetch(`${API_URL}/api/blogs/admin/all`, {
+  //         headers: {
+  //           Authorization: token,
+  //         },
+  //       });
 
-    return false;
-  };
+  //       const data = await response.json();
+  //       const handleAuthError = (status) => {
+  //         if (status === 401) {
+  //           localStorage.removeItem("token");
+  //           localStorage.removeItem("loggedInUser");
+
+  //           navigate(
+  //             `/signup-login/login?redirect=${encodeURIComponent("/admin/blogs")}`,
+  //             { replace: true },
+  //           );
+
+  //           return true;
+  //         }
+
+  //         if (status === 403) {
+  //           setError(
+  //             "Admin access required. Your account may not have admin permissions.",
+  //           );
+  //           return true;
+  //         }
+
+  //         return false;
+  //       };
+
+  //       if (handleAuthError(response.status)) return;
+
+  //       if (!response.ok) {
+  //         throw new Error(data.message || "Unable to fetch blogs.");
+  //       }
+
+  //       setBlogs(data.blogs || []);
+  //     } catch (err) {
+  //       console.error("Fetch blogs error:", err);
+  //       setError(err.message || "Something went wrong.");
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   }, [navigate]);
 
   const fetchBlogs = useCallback(async () => {
     const token = getToken();
@@ -82,6 +119,29 @@ function BlogManagement() {
       );
       return;
     }
+
+    const handleAuthError = (status) => {
+      if (status === 401) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("loggedInUser");
+
+        navigate(
+          `/signup-login/login?redirect=${encodeURIComponent("/admin/blogs")}`,
+          { replace: true },
+        );
+
+        return true;
+      }
+
+      if (status === 403) {
+        setError(
+          "Admin access required. Your account may not have admin permissions.",
+        );
+        return true;
+      }
+
+      return false;
+    };
 
     try {
       setLoading(true);
