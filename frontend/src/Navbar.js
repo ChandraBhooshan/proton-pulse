@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router";
+// import Blog from './modules/Blog/Blog.js';
 // import Footer from "./Footer.js";
 
 function Navbar() {

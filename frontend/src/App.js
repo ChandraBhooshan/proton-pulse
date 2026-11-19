@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./Navbar.js";
 import About from "./About.js";
 import Work from "./Work.js";
-import Blog from "./Blog.js";
+import Blog from "./modules/Blog/Blog.js";
 
 import Home from "./Home.js";
 import Dashboard from "./Dashboard.js";
