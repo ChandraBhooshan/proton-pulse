@@ -172,12 +172,12 @@ function Blog() {
 
   return (
     <div style={styles.container}>
-      <header style={styles.header}>
+      {/* <header style={styles.header}>
         <h1 style={styles.title}>My React Blog</h1>
         <p style={styles.subtitle}>
           Learn React concepts with simple blog posts.
         </p>
-      </header>
+      </header> */}
 
       <main>
         {loading && <p style={styles.message}>Loading blogs...</p>}
