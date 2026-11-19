@@ -377,7 +377,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { API_URL } from "../../config.js";
+import API_URL from "../../config";
 
 function BlogManagement() {
   const navigate = useNavigate();
