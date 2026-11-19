@@ -4,6 +4,7 @@ import Navbar from "./Navbar.js";
 import About from "./About.js";
 import Work from "./Work.js";
 import Blog from "./modules/Blog/Blog.js";
+import BlogDetails from "./modules/Blog/BlogDetails.js";
 
 import Home from "./Home.js";
 import Dashboard from "./Dashboard.js";
@@ -55,6 +56,7 @@ function App() {
           <Route path="/work/quiz/result" element={<QuizResult />} />
           <Route path="/work/quiz/history" element={<QuizHistory />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetails />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/signup-login" element={<Signup />} />
           <Route path="/signup-login/login" element={<Login />} />
