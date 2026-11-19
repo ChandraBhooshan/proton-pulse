@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import DOMPurify from "dompurify";
 import API_URL from "../../config";
+import "./BlogDetails.css";
+
 
 function BlogDetails() {
   const { slug } = useParams();
@@ -84,7 +87,13 @@ function BlogDetails() {
 
         <p style={styles.description}>{blog.description}</p>
 
-        <div style={styles.content}>{blog.content}</div>
+        {/* <div style={styles.content}>{blog.content}</div> */}
+        <div
+          className="public-blog-content"
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(blog.content || ""),
+          }}
+        />
       </article>
     </div>
   );

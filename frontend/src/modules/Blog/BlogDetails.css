@@ -1,0 +1,36 @@
+.public-blog-content {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+  overflow-wrap: anywhere;
+}
+
+.public-blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.public-blog-content blockquote {
+  border-left: 4px solid #9225e9;
+  padding: 10px 18px;
+  margin: 20px 0;
+  background: #f8f4fc;
+}
+
+.public-blog-content a {
+  color: #7c3aed;
+  text-decoration: underline;
+}
+
+.public-blog-content h1,
+.public-blog-content h2,
+.public-blog-content h3 {
+  color: #222;
+  margin-top: 25px;
+}
+
+.public-blog-content ul,
+.public-blog-content ol {
+  padding-left: 28px;
+}
