@@ -65,6 +65,7 @@ function App() {
             <Route index element={<AdminDashboard />} />
             <Route path="blogs" element={<BlogManagement />} />
             <Route path="blogs/new" element={<BlogEditor />} />
+            <Route path="blogs/edit/:id" element={<BlogEditor />} />
           </Route>
         </Routes>
       </BrowserRouter>

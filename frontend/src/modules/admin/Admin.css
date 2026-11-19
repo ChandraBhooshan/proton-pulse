@@ -293,6 +293,152 @@
   }
 }
 
+/* Blog management toolbar */
+
+.admin-blog-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.admin-blog-toolbar input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  outline: none;
+}
+
+.admin-blog-toolbar select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+}
+
+.admin-blog-counts {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 18px;
+  color: #777;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+/* Blog table */
+
+.admin-blog-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-blog-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-blog-table th,
+.admin-blog-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.admin-blog-table th {
+  color: #777;
+  font-weight: 600;
+  background: #fafafa;
+}
+
+.admin-blog-table td strong {
+  display: block;
+  color: #29293b;
+}
+
+.admin-blog-table td small {
+  display: block;
+  color: #999;
+  margin-top: 5px;
+}
+
+.admin-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+.admin-status.published {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.admin-status.draft {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+/* Blog actions */
+
+.admin-blog-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-blog-actions button {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.admin-blog-actions button:hover {
+  border-color: #a020f0;
+  color: #a020f0;
+}
+
+.admin-blog-actions .admin-delete-btn {
+  color: #dc2626;
+}
+
+.admin-blog-actions .admin-delete-btn:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.admin-error {
+  text-align: center;
+  padding: 25px;
+  color: #dc2626;
+}
+
+.admin-blog-toolbar button:disabled,
+.admin-editor-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  .admin-blog-toolbar {
+    flex-direction: column;
+  }
+
+  .admin-blog-toolbar input,
+  .admin-blog-toolbar select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .admin-blog-table {
+    min-width: 750px;
+  }
+}
+
 @media (max-width: 650px) {
   .admin-sidebar {
     width: 65px;
