@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <div>
       <div className="nav">
-        <div className="left">Proton</div>
+        <div className="left">ProtonPulse</div>
         <button
           className="navbaTogglerButton"
           type="button"
