@@ -7,7 +7,6 @@ import "./BlogDetails.css";
 
 function BlogDetails() {
   const { slug } = useParams();
-
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

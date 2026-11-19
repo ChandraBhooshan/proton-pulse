@@ -62,7 +62,6 @@ function App() {
           <Route path="/signup-login/login" element={<Login />} />
           <Route path="/signup-login/home" element={<LoginHome />} />
           {/* Admin routes */}
-          {/* <Route path="/admin/*" element={<AdminDashboard />} /> */}
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
             <Route path="blogs" element={<BlogManagement />} />
@@ -76,10 +75,23 @@ function App() {
 }
 
 // Hide navbar only during an active quiz.
+// function NavbarControl() {
+//   const location = useLocation();
+
+//   if (location.pathname === "/work/quiz/play") {
+//     return null;
+//   }
+
+//   return <Navbar />;
+// }
+
 function NavbarControl() {
   const location = useLocation();
 
-  if (location.pathname === "/work/quiz/play") {
+  if (
+    location.pathname === "/work/quiz/play" ||
+    location.pathname.startsWith("/admin")
+  ) {
     return null;
   }
 
