@@ -67,7 +67,7 @@
   /* background: linear-gradient(135deg, #ffffff 0%, #f5efff 100%); */
 
   /* border: 1px solid rgba(139, 92, 246, 0.2); */
-  border-radius: 10px;
+  /* border-radius: 10px; */
 
   /* box-shadow:
     0 8px 25px rgba(92, 52, 150, 0.1),
@@ -78,12 +78,12 @@
     box-shadow 0.3s ease;
 }
 
-.visitor-counter:hover {
+/* .visitor-counter:hover {
   transform: translateY(-4px);
   box-shadow:
     0 14px 30px rgba(92, 52, 150, 0.16),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
+} */
 
 .visitor-counter span {
   flex: 1;
@@ -91,11 +91,12 @@
   /* flex-direction: column; */
   /* align-items: center; */
   /* gap: 7px; */
-  padding: 0px 5px;
+  /* padding: 5px 12px; */
 }
 
 .visitor-counter span + span {
   border-left: 1px solid rgba(139, 92, 246, 0.2);
+  padding-left: 10px;
 }
 
 .visitor-counter strong {
@@ -107,6 +108,8 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-right: 5px;
+
 }
 
 .visitor-counter small {
