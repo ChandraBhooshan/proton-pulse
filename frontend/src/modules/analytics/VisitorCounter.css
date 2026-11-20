@@ -14,7 +14,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   font-size: 13px;
 } */
-.visitor-counter {
+/* .visitor-counter {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,5 +50,81 @@
     bottom: 10px;
     gap: 12px;
     padding: 8px 12px;
+  }
+} */
+
+.visitor-counter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: min(100%, 380px);
+  margin: 20px auto;
+  padding: 24px 20px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #ffffff 0%, #f5efff 100%);
+
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px rgba(92, 52, 150, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.visitor-counter:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 30px rgba(92, 52, 150, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.visitor-counter span {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+}
+
+.visitor-counter span + span {
+  border-left: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.visitor-counter strong {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+
+  background: linear-gradient(135deg, #7928ca, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.visitor-counter small {
+  color: #77708b;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .visitor-counter {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px 12px;
+  }
+
+  .visitor-counter strong {
+    font-size: 25px;
   }
 }
