@@ -8,6 +8,8 @@ import "./Work.css";
 import Newsletter from "./modules/newsletter/Newsletter";
 import QuizLanding from "./modules/quiz/QuizLanding";
 // import QuizSetup from "./modules/quiz/QuizSetup";
+import VisitorTracker from "./modules/analytics/VisitorTracker";
+import VisitorCounter from "./modules/analytics/VisitorCounter";
 
 function Work() {
   const navigate = useNavigate();
@@ -95,6 +97,11 @@ function Work() {
               <h2>Quiz Application</h2>
               <p>Test your knowledge with interactive quizzes.</p>
               <QuizLanding />
+            </section>
+            {/* Visitor Analytics */}
+            <section className="work-feature-card">
+              <VisitorTracker />
+              <VisitorCounter />
             </section>
           </div>
         </div>
