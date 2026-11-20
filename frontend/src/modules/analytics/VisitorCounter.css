@@ -1,4 +1,4 @@
-.visitor-counter {
+/* .visitor-counter {
   position: fixed;
   right: 18px;
   bottom: 18px;
@@ -13,8 +13,22 @@
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   font-size: 13px;
+} */
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 15px 25px;
+  background: #171717;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  font-size: 13px;
 }
-
 .visitor-counter span {
   display: flex;
   flex-direction: column;
