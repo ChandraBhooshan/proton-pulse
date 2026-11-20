@@ -12,20 +12,11 @@ function LoginHome() {
     setLoggedInUser(localStorage.getItem("loggedInUser"));
   }, []);
 
-  // const handleLogout = (e) => {
-  //   localStorage.removeItem("token");
-  //   localStorage.removeItem("loggedInUser");
-  //   handleSuccess("User Loggedout");
-  //   setTimeout(() => {
-  //     navigate("/signup-login/login");
-  //   }, 1000);
-  // };
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("jwtToken");
     localStorage.removeItem("loggedInUser");
     localStorage.removeItem("user");
-
     handleSuccess("User Logged out");
 
     setTimeout(() => {

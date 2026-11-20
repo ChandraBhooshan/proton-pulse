@@ -23,8 +23,6 @@ import AdminLayout from "./modules/admin/AdminLayout";
 import AdminDashboard from "./modules/admin/AdminDashboard";
 import BlogManagement from "./modules/admin/BlogManagement";
 import BlogEditor from "./modules/admin/BlogEditor";
-// import VisitorTracker from "./modules/analytics/VisitorTracker";
-// import VisitorCounter from "./modules/analytics/VisitorCounter";
 
 function App() {
   const CLIENT_ID =
@@ -33,8 +31,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <VisitorTracker />
-        <VisitorCounter /> */}
+
         <NavbarControl />
 
         <Routes>
