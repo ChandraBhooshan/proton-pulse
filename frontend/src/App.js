@@ -23,6 +23,8 @@ import AdminLayout from "./modules/admin/AdminLayout";
 import AdminDashboard from "./modules/admin/AdminDashboard";
 import BlogManagement from "./modules/admin/BlogManagement";
 import BlogEditor from "./modules/admin/BlogEditor";
+import VisitorTracker from "./modules/analytics/VisitorTracker";
+import VisitorCounter from "./modules/analytics/VisitorCounter";
 
 function App() {
   const CLIENT_ID =
@@ -31,6 +33,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <VisitorTracker />
+        <VisitorCounter />
         <NavbarControl />
 
         <Routes>
@@ -74,17 +78,6 @@ function App() {
   );
 }
 
-// Hide navbar only during an active quiz.
-// function NavbarControl() {
-//   const location = useLocation();
-
-//   if (location.pathname === "/work/quiz/play") {
-//     return null;
-//   }
-
-//   return <Navbar />;
-// }
-
 function NavbarControl() {
   const location = useLocation();
 
@@ -97,14 +90,5 @@ function NavbarControl() {
 
   return <Navbar />;
 }
-// Temporary admin dashboard placeholder.
-// We will move this into its own AdminLayout.js component.
-// function AdminDashboard() {
-//   return (
-//     <div style={{ padding: "40px" }}>
-//       <h1>ProtonPulse Admin Panel</h1>
-//       <p>Admin dashboard is being developed.</p>
-//     </div>
-//   );
-// }
+
 export default App;

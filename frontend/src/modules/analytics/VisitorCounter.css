@@ -1,0 +1,40 @@
+.visitor-counter {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 16px;
+  background: #171717;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+}
+
+.visitor-counter span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.visitor-counter strong {
+  font-size: 15px;
+}
+
+.visitor-counter small {
+  color: #bbb;
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  .visitor-counter {
+    right: 10px;
+    bottom: 10px;
+    gap: 12px;
+    padding: 8px 12px;
+  }
+}

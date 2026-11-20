@@ -15,7 +15,7 @@ const CVRouter = require("./Routes/CVRouter");
 const CVEmailOTPRouter = require("./Routes/CVEmailOTPRouter");
 const QuizRouter = require("./Routes/QuizRouter");
 const BlogRouter = require("./Routes/BlogRouter");
-
+const AnalyticsRouter = require("./Routes/AnalyticsRouter");
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -54,6 +54,7 @@ app.use("/api/cv", CVRouter);
 app.use("/api/cv", CVEmailOTPRouter);
 
 app.use("/api/blogs", BlogRouter);
+app.use("/api/analytics", AnalyticsRouter);
 
 // Local development only
 if (require.main === module) {
